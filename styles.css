@@ -23,5 +23,29 @@ body {
 .container {
     width: 80%;
     margin: 0 auto;
+    background:yellow;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    background: violet;
+}
+
+#upper {
     display: flex;
+    justify-content: space-between;
+    background: blue;
+}
+
+nav {
+    background: green;
+}
+
+footer {
+    background: red;
+}
+
+h1 {
+    font-size: 5rem;
 }
