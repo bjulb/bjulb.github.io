@@ -1,0 +1,27 @@
+:root {
+    --light-bg-color: #ECECEC;
+    --main-font-color: #313131;
+    --main-font-family: "Roboto Flex", Arial, sans-serif;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--light-bg-color);
+    font-family: var(--main-font-family);
+    color: var(--main-font-color);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
