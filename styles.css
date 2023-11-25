@@ -1,7 +1,11 @@
+/*WARIABLES AND BOX MODEL*/
+
 :root {
     --light-bg-color: #ECECEC;
     --main-font-color: #313131;
     --main-font-family: "Roboto Flex", Arial, sans-serif;
+    --main-a-color: #000000;
+    --main-hover-color: #ECECEC;
 }
 
 * {
@@ -14,6 +18,9 @@ html {
     scroll-behavior: smooth;
 }
 
+
+/*BASIC VIEW*/
+
 body {
     background-color: var(--light-bg-color);
     font-family: var(--main-font-family);
@@ -24,7 +31,6 @@ body {
 .container {
     width: 75%;
     margin: 2rem auto;
-    
 }
 
 main {
@@ -34,12 +40,11 @@ main {
     border-bottom: 2px solid var(--main-font-color);
 }
 
-#upper {
+#top {
     display: flex;
     justify-content: space-between;
     padding-bottom: 1rem;
     border-bottom: 2px solid var(--main-font-color);
-    
 }
 
 #title {
@@ -56,26 +61,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    font-size: 1.2rem;
-    line-height: 2rem;
     font-weight: bold;
-    
-}
-
-nav a {
-    text-align: left;
-    padding: 3px 6px;
-    
-}
-
-#about {
-    width: 70%;
-    
-}
-
-#list {
-    width: 30%;
-    
 }
 
 footer {
@@ -84,43 +70,56 @@ footer {
     text-align: center;
     font-size: 0.9rem;
     letter-spacing: 3px;
-    
+}
+
+#right {
+    width: 70%;   
+}
+
+#left {
+    width: 30%;
 }
 
 h1 {
     font-size: 5rem;
     font-weight: 900;
-    
 }
 
 h2 {
-    font-size: 2rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
 a {
     text-decoration: none;
-    color: #000000;
+    color: var(--main-a-color);
 }
 
 a:hover {
+    color: var(--main-hover-color);
     background: var(--main-font-color);
-    color: #ffffff;
 }
 
-p {
+nav a {
+    padding: 3px 6px;
+    text-align: left;
+}
+
+footer a:hover {
+    color: var(--main-a-color);
+    background: none;
+    text-decoration: underline;
+}
+
+nav, p, li {
     line-height: 2rem;
 }
 
 li {
-    line-height: 2rem;
     list-style-type: none;
 }
 
-footer a:hover {
-    color: #000;
-    background: none;
-    text-decoration: underline;
-}
+
+/*MEDIA QUERIES*/
