@@ -98,13 +98,22 @@ a {
     color: var(--main-a-color);
 }
 
-a:hover {
+#links a:hover {
     color: var(--main-hover-color);
     background: var(--main-font-color);
 }
 
+#menu a:hover {
+    text-decoration: underline;
+    
+}
+
 #links a {
     padding: 3px 6px;
+}
+
+.active {
+    font-weight: bold;
 }
 
 footer a:hover {
