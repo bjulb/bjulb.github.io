@@ -55,11 +55,11 @@ main {
     font-size: 2rem;
 }
 
-nav {
+#links {
     width: 15%;
 }
 
-nav ul {
+#links ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -79,9 +79,7 @@ footer {
     width: 70%;   
 }
 
-#left {
-    width: 30%;
-}
+
 
 h1 {
     font-size: 5rem;
@@ -105,7 +103,7 @@ a:hover {
     background: var(--main-font-color);
 }
 
-nav a {
+#links a {
     padding: 3px 6px;
 }
 
@@ -115,7 +113,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-nav, p, li {
+#links, p, li {
     line-height: 2rem;
 }
 
@@ -140,7 +138,7 @@ li {
         width: 60%;
     }
 
-    nav {
+    #links {
         width: 25%;
     }
     
@@ -148,7 +146,7 @@ li {
         width: 75%;   
     }
 
-    #left {
+    #links {
         width: 25%;
     }
 
@@ -161,11 +159,11 @@ li {
         align-items: center;
     }
 
-    #left, #right {
+    #links, #right {
         width: 100%;
     }
 
-    #left {
+    #links {
         text-align: center;
     }
 
@@ -181,12 +179,12 @@ li {
         width: 100%;
     }
 
-    nav {
+    #links {
         width: 100%;
         padding-top: 2rem;
     }
 
-    nav ul {
+    #links ul {
         flex-direction: row;
     }
     
