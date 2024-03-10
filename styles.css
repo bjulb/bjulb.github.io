@@ -93,6 +93,12 @@ h2 {
     font-weight: bold;
 }
 
+h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
 a {
     text-decoration: none;
     color: var(--main-a-color);
