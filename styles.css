@@ -99,6 +99,12 @@ h3 {
     line-height: 2rem;
 }
 
+h5 {
+    margin-top: 1rem;
+    text-decoration: underline dashed;
+    
+}
+
 a {
     text-decoration: none;
     color: var(--main-a-color);
@@ -128,7 +134,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-#links, p, li, h4 {
+#links, p, li, h4, h5 {
     line-height: 2rem;
 }
 
@@ -136,6 +142,19 @@ li {
     list-style-type: none;
 }
 
+.content-table-name {
+    font-style: italic;
+}
+
+.collapse-content {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+}
+
+.collapse-content li, p {
+    line-height: 1.5rem;
+}
 
 /*MEDIA QUERIES*/
 

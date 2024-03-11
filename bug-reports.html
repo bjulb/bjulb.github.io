@@ -53,8 +53,44 @@
                     <h3>EXAMPLE 1 - REPORT</h3>
                     <h4 class="collapse-header">[EN] Newly added subdepartment with its employees is not visible in monthly reports for supervisors</h4>
                     <div class="collapse-content"></div>
-                    <h4 class="collapse-header">[PL] Raport miesięczny przełożonego nie pokazuje podwładnych z nowo dodanych poddziałów</h4>
-                    <div class="collapse-content"></div>
+                    <h4 class="collapse-header" id="case1-pl-head">[PL] Raport miesięczny przełożonego nie pokazuje podwładnych z nowo dodanych poddziałów</h4>
+                    <div class="collapse-content" id="case1-pl-cont">
+                        <ul>
+                            <li>Poziom istotności: niski</li>
+                            <li>Priorytet: niski</li>
+                        </ul>
+                        <h5>Środowisko</h5>
+                        <ul>
+                            <li>DEV3, Desktop</li>
+                            <li>Model: ThinkPad T430</li>
+                            <li>OS: MS Windows 10 Pro, 64-bit, ver. 22H2</li>
+                            <li>Przeglądarka: Mozilla Firefox, ver. 123.0.1</li>
+                        </ul>
+                        
+                        <h5>Opis</h5>
+                        <p>W raporcie za miesiąc styczeń 2024 Poniatowski widzi tylko 5 bezpośrednich podwładnych.</p>
+                        <p>W Zarządzaniu Jednostkami do jego działu przypisanych jest 6 poddziałów i każdy z nich ma przełożonego - i tylu też powinien on widzieć w raporcie.</p>
+                        <p>Brakującym podwładnym jest Tyszkiewicz z poddziału 12PU.</p>
+                        <p>Błąd występuje tak na stronie jak i w generowanym pliku excel.</p>
+
+                        <h5>Dane</h5>
+                        <ul>
+                            <li>Przełożony: Poniatowski (db: <span class="content-table-name">users</span>, id=8758), dział 1D (db: <span class="content-table-name">regiments</span>, id=2)</li>
+                            <li>Podwładny: Tyszkiewicz (db: <span class="content-table-name">users</span>, id=11876), poddział 12PU (db: <span class="content-table-name">regiments</span>, id=19)</li>
+                            <li>Raport: Raporty Miesięczne, styczeń 2024, (db: <span class="content-table-name">reports_structure</span>, id=28)</li>
+                        </ul>
+                                             
+                        <h5>Inwestygacja</h5>
+                        <p>Tabela <span class="content-table-name">regiments</span>: do 1D przypisanych jest 6 poddziałów.</p>
+                        <p>Tabela <span class="content-table-name">reports_structure_regiments</span>: dla stycznia 2024 do 1D przypisanych jest 5 poddziałów - brakuje 12PU.</p>
+                        <p>Miesiąc styczeń 2024 został otwarty w systemie 2024-01-01, wtedy też utworzono rekordy w <span class="content-table-name">reports_structure</span>.</p>
+                        <p>Poddział 12PU został utworzony 2024-01-10 w <span class="content-table-name">regiments</span> - czyli już po otwarciu stycznia w systemie.</p>
+                        <p>Po ręcznym dodaniu 12PU w tabeli <span class="content-table-name">reports_structure_regiments</span>, Tyszkiewicz jest widoczny w raporcie w systemie - tak na stronie jak i w generowanym excelu.</p>
+
+                        <h5>Prawdopodobna przyczyna</h5>
+                        <p>Tabela <span class="content-table-name">reports_structure_regiments</span> nie aktualizuje się automatycznie zgodnie ze zmianami w <span class="content-table-name">regiments</span> - a powinna, niezależnie od tego, kiedy w danym miesiącu został dodany nowy poddział.</p>
+                        
+                    </div>
                                         
                     <h3>EXAMPLE 2 - FORM</h3>
                     <h4 class="collapse-header">[EN] 'Create new employee' form saved incorrectly after filling fields in specific order</h4>
