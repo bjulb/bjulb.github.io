@@ -163,6 +163,7 @@ button.collapse-header {
     padding: 0;
     background: none;
     border: 0;
+    text-align: left;
 }
 
 button.collapse-header:hover {

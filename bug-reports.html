@@ -51,8 +51,42 @@
                         <h2>bug reports</h2>
                     </header>
                     <h3>EXAMPLE 1 - REPORT</h3>
-                    <h4 class="collapse-header">[EN] Newly added subdepartment with its employees is not visible in monthly reports for supervisors</h4>
-                    <div class="collapse-content"></div>
+                    <article id="case1en">
+                        <button type="button" class="collapse-header" id="case1-en-head"><h4>[EN] Newly added subdepartment with its employees is not visible in monthly reports for supervisors</h4></button>
+                        <div class="collapse-content" id="case1-en-cont">
+                            <h5>Impact</h5>
+                            <ul>
+                                <li>Severity: low</li>
+                                <li>Priority: low</li>
+                            </ul>
+                            <h5>Environtment</h5>
+                            <ul>
+                                <li>DEV3, Desktop</li>
+                                <li>Model: ThinkPad T430</li>
+                                <li>OS: MS Windows 10 Pro, 64-bit, ver. 22H2</li>
+                                <li>Browser: Mozilla Firefox, ver. 123.0.1</li>
+                            </ul>
+                            <h5>Description</h5>
+                            <p>Supervisor Poniatowski from department 1D sees only 5 managers in the monthly report for January 2024.</p>
+                            <p>In Unit Management panel there are 6 subdepartments assigned to depatment 1D and each of them has assigned its respecitve manager. Supervisor should see all of them in the report.</p>
+                            <p>The manager not visible in report is Tyszkiewicz from subdepartment 12PU.</p>
+                            <p>Error occurrs on the page and in the exported excel file.</p>
+                            <h5>Data</h5>
+                            <ul>
+                                <li>Supevisor: Poniatowski (db: <span class="content-table-name">users</span>, id=8758), department 1D (db: <span class="content-table-name">regiments</span>, id=2)</li>
+                                <li>Manager: Tyszkiewicz (db: <span class="content-table-name">users</span>, id=11876), subdepartment 12PU (db: <span class="content-table-name">regiments</span>, id=19)</li>
+                                <li>Report: Monthly Reports, January 2024, (db: <span class="content-table-name">reports_structure</span>, id=28)</li>
+                            </ul>
+                            <h5>Investigation</h5>
+                            <p><span class="content-table-name">regiments</span> table: 6 subdepartmens assigned to 1D</p>
+                            <p><span class="content-table-name">reports_structure_regiments</span> table: for January 2024 only 5 subdepartmens were assigned to 1D - 12PU not among them</p>
+                            <p>January 2024 has been opened in the system on 2024-01-01 - same day as records w <span class="content-table-name">reports_structure</span> were created.</p>
+                            <p>Subdepartment 12PU has been created on 2024-01-10 in <span class="content-table-name">regiments</span> table - so 10 days after opening January 2024 reports in the system.</p>
+                            <p>After manually adding 12PU to table <span class="content-table-name">reports_structure_regiments</span>, Tyszkiewicz is now visible in the reports - on the page and in the exported excel file.</p>
+                            <h5>Probable cause</h5>
+                            <p><span class="content-table-name">reports_structure_regiments</span> table is not updated automatically to reflect changes in <span class="content-table-name">regiments</span> table - but it should be, regardless of which day of the month new subdepartment is added.</p>
+                        </div>
+                    </article>
                     <article id="case1pl">
                         <button type="button" class="collapse-header" id="case1-pl-head"><h4>[PL] Raport miesięczny przełożonego nie pokazuje podwładnych z nowo dodanych poddziałów</h4></button>
                         <div class="collapse-content" id="case1-pl-cont">
@@ -73,24 +107,20 @@
                             <p>W Zarządzaniu Jednostkami do jego działu przypisanych jest 6 poddziałów i każdy z nich ma przełożonego - i tylu też powinien on widzieć w raporcie.</p>
                             <p>Brakującym podwładnym jest Tyszkiewicz z poddziału 12PU.</p>
                             <p>Błąd występuje tak na stronie jak i w generowanym pliku excel.</p>
-
                             <h5>Dane</h5>
                             <ul>
                                 <li>Przełożony: Poniatowski (db: <span class="content-table-name">users</span>, id=8758), dział 1D (db: <span class="content-table-name">regiments</span>, id=2)</li>
                                 <li>Podwładny: Tyszkiewicz (db: <span class="content-table-name">users</span>, id=11876), poddział 12PU (db: <span class="content-table-name">regiments</span>, id=19)</li>
                                 <li>Raport: Raporty Miesięczne, styczeń 2024, (db: <span class="content-table-name">reports_structure</span>, id=28)</li>
-                            </ul>
-                                             
+                            </ul>                                     
                             <h5>Inwestygacja</h5>
                             <p>Tabela <span class="content-table-name">regiments</span>: do 1D przypisanych jest 6 poddziałów.</p>
                             <p>Tabela <span class="content-table-name">reports_structure_regiments</span>: dla stycznia 2024 do 1D przypisanych jest 5 poddziałów - brakuje 12PU.</p>
                             <p>Miesiąc styczeń 2024 został otwarty w systemie 2024-01-01, wtedy też utworzono rekordy w <span class="content-table-name">reports_structure</span>.</p>
                             <p>Poddział 12PU został utworzony 2024-01-10 w <span class="content-table-name">regiments</span> - czyli już po otwarciu stycznia w systemie.</p>
                             <p>Po ręcznym dodaniu 12PU w tabeli <span class="content-table-name">reports_structure_regiments</span>, Tyszkiewicz jest widoczny w raporcie w systemie - tak na stronie jak i w generowanym excelu.</p>
-
                             <h5>Prawdopodobna przyczyna</h5>
                             <p>Tabela <span class="content-table-name">reports_structure_regiments</span> nie aktualizuje się automatycznie zgodnie ze zmianami w <span class="content-table-name">regiments</span> - a powinna, niezależnie od tego, kiedy w danym miesiącu został dodany nowy poddział.</p>
-                        
                         </div>
                     </article>
                     <br><br>                  
