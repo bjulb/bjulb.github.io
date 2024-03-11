@@ -147,12 +147,13 @@ li {
 }
 
 .collapse-content {
+    display: none;
     padding-top: 1rem;
     padding-bottom: 2rem;
     padding-left: 1rem;
 }
 
-.collapse-content li, p {
+.collapse-content li, .collapse-content p {
     line-height: 1.5rem;
 }
 
