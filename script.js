@@ -4,8 +4,16 @@ let BugRepCase1pl_Head = document.getElementById("case1-pl-head");
 let BugRepCase1en_Cont = document.getElementById("case1-en-cont");
 let BugRepCase1en_Head = document.getElementById("case1-en-head");
 
+let BugRepCase2pl_Cont = document.getElementById("case2-pl-cont");
+let BugRepCase2pl_Head = document.getElementById("case2-pl-head");
+let BugRepCase2en_Cont = document.getElementById("case2-en-cont");
+let BugRepCase2en_Head = document.getElementById("case2-en-head");
+
 BugRepCase1pl_Cont.style.display = "none";
 BugRepCase1en_Cont.style.display = "none";
+
+BugRepCase2pl_Cont.style.display = "none";
+BugRepCase2en_Cont.style.display = "none";
 
 function collapseArticle(head, content) {
     if (content.style.display == "none") {
@@ -25,6 +33,14 @@ BugRepCase1pl_Head.onclick = () => {
 
 BugRepCase1en_Head.onclick = () => {
     collapseArticle(BugRepCase1en_Head, BugRepCase1en_Cont);
+}
+
+BugRepCase2pl_Head.onclick = () => {
+    collapseArticle(BugRepCase2pl_Head, BugRepCase2pl_Cont);
+}
+
+BugRepCase2en_Head.onclick = () => {
+    collapseArticle(BugRepCase2en_Head, BugRepCase2en_Cont);
 }
 
 /*
