@@ -71,6 +71,18 @@
                             <p>In Unit Management panel there are 6 subdepartments assigned to depatment 1D and each of them has assigned its respecitve manager. Supervisor should see all of them in the report.</p>
                             <p>The manager not visible in report is Tyszkiewicz from subdepartment 12PU.</p>
                             <p>Error occurrs on the page and in the exported excel file.</p>
+                            <h5>Steps to reproduce</h5>
+                            <ol>
+                                <li>Go to the main site.</li>
+                                <li>Login as poniatowskij.</li>
+                                <li>In the menu click "Reports".</li>
+                                <li>On the main reports page click "Monthly Reports".</li>
+                                <li>Click in the field "year" and choose "2024" and from the dropdown list.</li>
+                                <li>Click in the field "month" and choose "January" from the dropdown list.</li>
+                                <li>Click "Generate" button.</li>
+                            </ol>
+                            <p>Expected result: the report contains 6 rows, each for separate subdepartment and its respective manager.</p>
+                            <p>Actual result: the report contains only 5 rows - 1 subdepartment/manager is missing.</p>
                             <h5>Data</h5>
                             <ul>
                                 <li>Supevisor: Poniatowski (db: <span class="content-table-name">users</span>, id=8758), department 1D (db: <span class="content-table-name">regiments</span>, id=2)</li>
@@ -107,6 +119,15 @@
                             <p>W Zarządzaniu Jednostkami do jego działu przypisanych jest 6 poddziałów i każdy z nich ma przełożonego - i tylu też powinien on widzieć w raporcie.</p>
                             <p>Brakującym podwładnym jest Tyszkiewicz z poddziału 12PU.</p>
                             <p>Błąd występuje tak na stronie jak i w generowanym pliku excel.</p>
+                            <h5>Kroki do reprodukcji</h5>
+                            <ol>
+                                <li>Login as Poniatowski.</li>
+                                <li>In the menu click "Reports".</li>
+                                <li>On the main reports page click "Monthly Reports".</li>
+                                <li>Click in field "year" and choose "2024" and from the dropdown list.</li>
+                                <li>Click in field "month" and choose "January" from the dropdown list.</li>
+                                <li>Click "Generate" button.</li>
+                            </ol>
                             <h5>Dane</h5>
                             <ul>
                                 <li>Przełożony: Poniatowski (db: <span class="content-table-name">users</span>, id=8758), dział 1D (db: <span class="content-table-name">regiments</span>, id=2)</li>
