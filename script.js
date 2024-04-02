@@ -1,19 +1,26 @@
-let BugRepCase1pl_Cont = document.getElementById("case1-pl-cont");
-let BugRepCase1pl_Head = document.getElementById("case1-pl-head");
-//let BugRepHeader = document.getElementsByClassName("collapse-header")
-let BugRepCase1en_Cont = document.getElementById("case1-en-cont");
-let BugRepCase1en_Head = document.getElementById("case1-en-head");
+//-----------------------OBJECTS AND CLASSES
+//Bug Report Cases Objects
 
-let BugRepCase2pl_Cont = document.getElementById("case2-pl-cont");
-let BugRepCase2pl_Head = document.getElementById("case2-pl-head");
-let BugRepCase2en_Cont = document.getElementById("case2-en-cont");
-let BugRepCase2en_Head = document.getElementById("case2-en-head");
+class BugCase {
+    constructor(head, cont, lang) {
+        this.head = head;
+        this.cont = cont;
+        this.lang = lang;
+        this.cont.style.display = "none";
+    }
+}
 
-BugRepCase1pl_Cont.style.display = "none";
-BugRepCase1en_Cont.style.display = "none";
+const BR_Case1_en = new BugCase(document.getElementById("case1-en-head"), document.getElementById("case1-en-cont"), "en");
+const BR_Case1_pl = new BugCase(document.getElementById("case1-pl-head"), document.getElementById("case1-pl-cont"), "pl");
+const BR_Case2_en = new BugCase(document.getElementById("case2-en-head"), document.getElementById("case2-en-cont"), "en");
+const BR_Case2_pl = new BugCase(document.getElementById("case2-pl-head"), document.getElementById("case2-pl-cont"), "pl");
 
-BugRepCase2pl_Cont.style.display = "none";
-BugRepCase2en_Cont.style.display = "none";
+
+
+
+
+//---------------------FUNCTIONS
+//-------Collapse Function
 
 function collapseArticle(head, content) {
     if (content.style.display == "none") {
@@ -27,45 +34,25 @@ function collapseArticle(head, content) {
     }
 }
 
-BugRepCase1pl_Head.onclick = () => {
-    collapseArticle(BugRepCase1pl_Head, BugRepCase1pl_Cont);
-}
-
-BugRepCase1en_Head.onclick = () => {
-    collapseArticle(BugRepCase1en_Head, BugRepCase1en_Cont);
-}
-
-BugRepCase2pl_Head.onclick = () => {
-    collapseArticle(BugRepCase2pl_Head, BugRepCase2pl_Cont);
-}
-
-BugRepCase2en_Head.onclick = () => {
-    collapseArticle(BugRepCase2en_Head, BugRepCase2en_Cont);
-}
-
-/*
-BugRepCase1pl_Head.onclick = () => {
-    if (BugRepCase1pl_Cont.style.display == "none") {
-        BugRepCase1pl_Cont.style.display = "block";
-        BugRepCase1pl_Head.style.fontWeight = "bold";
-        BugRepCase1pl_Head.style.textAlign = "left";
-    }
-    else if (BugRepCase1pl_Cont.style.display != "none") {
-        BugRepCase1pl_Cont.style.display = "none";
-        BugRepCase1pl_Head.style.fontWeight = "normal";
-    }
-}
 
 
-BugRepCase1en_Head.onclick = () => {
-    if (BugRepCase1en_Cont.style.display == "none") {
-        BugRepCase1en_Cont.style.display = "block";
-        BugRepCase1en_Head.style.fontWeight = "bold";
-        BugRepCase1pl_Head.style.textAlign = "left";
-    }
-    else if (BugRepCase1en_Cont.style.display != "none") {
-        BugRepCase1en_Cont.style.display = "none";
-        BugRepCase1en_Head.style.fontWeight = "normal";
-    }
+
+//----------------FUNCTION CALLS
+
+//Bug Reports Collapse
+
+BR_Case1_en.head.onclick = () => {
+    collapseArticle(BR_Case1_en.head, BR_Case1_en.cont);
 }
-*/
+
+BR_Case1_pl.head.onclick = () => {
+    collapseArticle(BR_Case1_pl.head, BR_Case1_pl.cont);
+}
+
+BR_Case2_en.head.onclick = () => {
+    collapseArticle(BR_Case2_en.head, BR_Case2_en.cont);
+}
+
+BR_Case2_pl.head.onclick = () => {
+    collapseArticle(BR_Case2_pl.head, BR_Case2_pl.cont);
+}
