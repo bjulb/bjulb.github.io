@@ -142,6 +142,15 @@ li {
     list-style-type: none;
 }
 
+ol li {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+ol {
+    padding-bottom: 1rem;
+}
+
 .content-table-name {
     font-style: italic;
 }
