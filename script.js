@@ -12,8 +12,8 @@ class BugCase {
 
 const BR_Case1_en = new BugCase(document.getElementById("case1-en-head"), document.getElementById("case1-en-cont"), "en");
 const BR_Case1_pl = new BugCase(document.getElementById("case1-pl-head"), document.getElementById("case1-pl-cont"), "pl");
-const BR_Case2_en = new BugCase(document.getElementById("case2-en-head"), document.getElementById("case2-en-cont"), "en");
-const BR_Case2_pl = new BugCase(document.getElementById("case2-pl-head"), document.getElementById("case2-pl-cont"), "pl");
+//const BR_Case2_en = new BugCase(document.getElementById("case2-en-head"), document.getElementById("case2-en-cont"), "en");
+//const BR_Case2_pl = new BugCase(document.getElementById("case2-pl-head"), document.getElementById("case2-pl-cont"), "pl");
 
 
 
@@ -22,14 +22,14 @@ const BR_Case2_pl = new BugCase(document.getElementById("case2-pl-head"), docume
 //---------------------FUNCTIONS
 //-------Collapse Function
 
-function collapseArticle(head, content) {
-    if (content.style.display == "none") {
-        content.style.display = "block";
+function collapseArticle(head, cont) {
+    if (cont.style.display == "none") {
+        cont.style.display = "block";
         head.style.fontWeight = "bold";
         head.style.textAlign = "left";
     }
-    else if (content.style.display != "none") {
-        content.style.display = "none";
+    else if (cont.style.display != "none") {
+        cont.style.display = "none";
         head.style.fontWeight = "normal";
     }
 }
@@ -48,7 +48,7 @@ BR_Case1_en.head.onclick = () => {
 BR_Case1_pl.head.onclick = () => {
     collapseArticle(BR_Case1_pl.head, BR_Case1_pl.cont);
 }
-
+/*
 BR_Case2_en.head.onclick = () => {
     collapseArticle(BR_Case2_en.head, BR_Case2_en.cont);
 }
@@ -56,3 +56,4 @@ BR_Case2_en.head.onclick = () => {
 BR_Case2_pl.head.onclick = () => {
     collapseArticle(BR_Case2_pl.head, BR_Case2_pl.cont);
 }
+*/
