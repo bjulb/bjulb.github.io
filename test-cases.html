@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Repository created to document software testing projects and experience">
+
+        <link rel="stylesheet" href="./cssreset.css">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex">
+
+        <script src="https://kit.fontawesome.com/a6b29c2b84.js" crossorigin="anonymous"></script>
+
+        <title>Julia Bula - portfolio</title>
+
+    </head>
+    <body>
+        <div class="container">
+            <section id="top">
+                <header id="title">
+                    <h1>Julia Bula</h1>
+                    <p id="subtitle">Software Tester</p>
+                </header>
+                <nav id="links">
+                    <ul>
+                        <a href="https://www.linkedin.com/in/julia-bula" target="_blank"><li><i class="fa-brands fa-linkedin fa-lg"></i> linkedin</li></a>
+                        <a href="https://github.com/bjulb" target="_blank"><li><i class="fa-brands fa-square-github fa-lg"></i> github</li></a>
+                        <a href="https://www.instagram.com/b_julb" target="_blank"><li><i class="fa-brands fa-square-instagram fa-lg"></i> instagram</li></a>
+                    </ul>
+                </nav>
+            </section>
+            <main>
+                <section id="left">
+                    <header>
+                        <h2>content</h2>
+                    </header>
+                    <nav id="menu">
+                        <ul>
+                            <a href="./index.html"><li>about</li></a>
+                            <li>test plan</li>
+                            <li>test cases</li>
+                            <a href="./bug-reports.html"><li class="active">bug reports</li></a>
+                            <li>jira/xray</li>
+                            <li>postman</li>
+                            <li>...</li>
+                        </ul>
+                    </nav>
+                </section>
+                <section id="right">
+                    <header>
+                        <h2>bug reports</h2>
+                    </header>
+                    <h3>EXAMPLE 1 - REPORT</h3>
+                    <article id="case1en">
+                        <button type="button" class="collapse-header" id="case1-en-head"><h4>[EN] Newly added subdepartment with its employees is not visible in monthly reports for supervisors</h4></button>
+                        <div class="collapse-content" id="case1-en-cont">
+                            <h5>Impact</h5>
+                            <ul>
+                                <li>Severity: low</li>
+                                <li>Priority: low</li>
+                            </ul>
+                            <h5>Environtment</h5>
+                            <ul>
+                                <li>DEV3, Desktop</li>
+                                <li>Model: ThinkPad T430</li>
+                                <li>OS: MS Windows 10 Pro, 64-bit, ver. 22H2</li>
+                                <li>Browser: Mozilla Firefox, ver. 123.0.1</li>
+                            </ul>
+                            <h5>Description</h5>
+                            <p>Supervisor Poniatowski from department 1D sees only 5 managers in the monthly report for January 2024.</p>
+                            <p>In Unit Management panel there are 6 subdepartments assigned to depatment 1D and each of them has assigned its respecitve manager. Supervisor should see all of them in the report.</p>
+                            <p>The manager not visible in report is Tyszkiewicz from subdepartment 12PU.</p>
+                            <p>Error occurrs on the page and in the exported excel file.</p>
+                            <h5>Steps to reproduce</h5>
+                            <ol>
+                                <li>Go to the main site.</li>
+                                <li>Login as poniatowskij.</li>
+                                <li>In the menu click "Reports".</li>
+                                <li>On the main reports page click "Monthly Reports".</li>
+                                <li>Click in the field "year" and choose "2024" and from the dropdown list.</li>
+                                <li>Click in the field "month" and choose "January" from the dropdown list.</li>
+                                <li>Click "Generate" button.</li>
+                            </ol>
+                            <p>Expected result: the report contains 6 rows, each for separate subdepartment and its respective manager.</p>
+                            <p>Actual result: the report contains only 5 rows - 1 subdepartment/manager is missing.</p>
+                            <h5>Data</h5>
+                            <ul>
+                                <li>Supevisor: Poniatowski (db: <span class="content-table-name">users</span>, id=8758), department 1D (db: <span class="content-table-name">regiments</span>, id=2)</li>
+                                <li>Manager: Tyszkiewicz (db: <span class="content-table-name">users</span>, id=11876), subdepartment 12PU (db: <span class="content-table-name">regiments</span>, id=19)</li>
+                                <li>Report: Monthly Reports, January 2024, (db: <span class="content-table-name">reports_structure</span>, id=28)</li>
+                            </ul>
+                            <h5>Investigation</h5>
+                            <p><span class="content-table-name">regiments</span> table: 6 subdepartmens assigned to 1D</p>
+                            <p><span class="content-table-name">reports_structure_regiments</span> table: for January 2024 only 5 subdepartmens were assigned to 1D - 12PU not among them</p>
+                            <p>January 2024 has been opened in the system on 2024-01-01 - same day as records w <span class="content-table-name">reports_structure</span> were created.</p>
+                            <p>Subdepartment 12PU has been created on 2024-01-10 in <span class="content-table-name">regiments</span> table - so 10 days after opening January 2024 reports in the system.</p>
+                            <p>After manually adding 12PU to table <span class="content-table-name">reports_structure_regiments</span>, Tyszkiewicz is now visible in the reports - on the page and in the exported excel file.</p>
+                            <h5>Probable cause</h5>
+                            <p><span class="content-table-name">reports_structure_regiments</span> table is not updated automatically to reflect changes in <span class="content-table-name">regiments</span> table - but it should be, regardless of which day of the month new subdepartment is added.</p>
+                        </div>
+                    </article>
+                    <article id="case1pl">
+                        <button type="button" class="collapse-header" id="case1-pl-head"><h4>[PL] Raport miesięczny przełożonego nie pokazuje podwładnych z nowo dodanych poddziałów</h4></button>
+                        <div class="collapse-content" id="case1-pl-cont">
+                            <h5>Impact</h5>
+                            <ul>
+                                <li>Poziom istotności: niski</li>
+                                <li>Priorytet: niski</li>
+                            </ul>
+                            <h5>Środowisko</h5>
+                            <ul>
+                                <li>DEV3, Desktop</li>
+                                <li>Model: ThinkPad T430</li>
+                                <li>OS: MS Windows 10 Pro, 64-bit, ver. 22H2</li>
+                                <li>Przeglądarka: Mozilla Firefox, ver. 123.0.1</li>
+                            </ul>
+                            <h5>Opis</h5>
+                            <p>W raporcie za miesiąc styczeń 2024 Poniatowski widzi tylko 5 bezpośrednich podwładnych.</p>
+                            <p>W Zarządzaniu Jednostkami do jego działu przypisanych jest 6 poddziałów i każdy z nich ma przełożonego - i tylu też powinien on widzieć w raporcie.</p>
+                            <p>Brakującym podwładnym jest Tyszkiewicz z poddziału 12PU.</p>
+                            <p>Błąd występuje tak na stronie jak i w generowanym pliku excel.</p>
+                            <h5>Kroki do reprodukcji</h5>
+                            <ol>
+                                <li>Login as Poniatowski.</li>
+                                <li>In the menu click "Reports".</li>
+                                <li>On the main reports page click "Monthly Reports".</li>
+                                <li>Click in field "year" and choose "2024" and from the dropdown list.</li>
+                                <li>Click in field "month" and choose "January" from the dropdown list.</li>
+                                <li>Click "Generate" button.</li>
+                            </ol>
+                            <h5>Dane</h5>
+                            <ul>
+                                <li>Przełożony: Poniatowski (db: <span class="content-table-name">users</span>, id=8758), dział 1D (db: <span class="content-table-name">regiments</span>, id=2)</li>
+                                <li>Podwładny: Tyszkiewicz (db: <span class="content-table-name">users</span>, id=11876), poddział 12PU (db: <span class="content-table-name">regiments</span>, id=19)</li>
+                                <li>Raport: Raporty Miesięczne, styczeń 2024, (db: <span class="content-table-name">reports_structure</span>, id=28)</li>
+                            </ul>                                     
+                            <h5>Inwestygacja</h5>
+                            <p>Tabela <span class="content-table-name">regiments</span>: do 1D przypisanych jest 6 poddziałów.</p>
+                            <p>Tabela <span class="content-table-name">reports_structure_regiments</span>: dla stycznia 2024 do 1D przypisanych jest 5 poddziałów - brakuje 12PU.</p>
+                            <p>Miesiąc styczeń 2024 został otwarty w systemie 2024-01-01, wtedy też utworzono rekordy w <span class="content-table-name">reports_structure</span>.</p>
+                            <p>Poddział 12PU został utworzony 2024-01-10 w <span class="content-table-name">regiments</span> - czyli już po otwarciu stycznia w systemie.</p>
+                            <p>Po ręcznym dodaniu 12PU w tabeli <span class="content-table-name">reports_structure_regiments</span>, Tyszkiewicz jest widoczny w raporcie w systemie - tak na stronie jak i w generowanym excelu.</p>
+                            <h5>Prawdopodobna przyczyna</h5>
+                            <p>Tabela <span class="content-table-name">reports_structure_regiments</span> nie aktualizuje się automatycznie zgodnie ze zmianami w <span class="content-table-name">regiments</span> - a powinna, niezależnie od tego, kiedy w danym miesiącu został dodany nowy poddział.</p>
+                        </div>
+                    </article>
+                    <br><br>                  
+                    <!--<h3>EXAMPLE 2 - FORM</h3>-->
+                    <article id="case2en">
+                        <button type="button" class="collapse-header" id="case2-en-head"><h4>[EN] 'Create new employee' form saved incorrectly after filling fields in specific order</h4></button>
+                        <div class="collapse-content" id="case2-en-cont">
+                            <h5>Impact</h5>
+                            <ul>
+                                <li>Severity: low</li>
+                                <li>Priority: low</li>
+                            </ul>
+                            <h5>Environtment</h5>
+                            <ul>
+                                <li>DEV3, Desktop</li>
+                                <li>Model: ThinkPad T430</li>
+                                li>OS: MS Windows 10 Pro, 64-bit, ver. 22H2</li>
+                                <li>Browser: Mozilla Firefox, ver. 123.0.1</li>
+                            </ul>
+                            <h5>Description</h5>
+                            <p>...</p>
+                            <h5>Data</h5>
+                            <ul>
+                                <li>... (db: <span class="content-table-name">tablename</span>, id=xxxx)</li>
+                            </ul>
+                            <h5>Investigation</h5>
+                            <p><span class="content-table-name">tablename</span> ...</p>
+                            <p>...</p>
+                            <h5>Probable cause</h5>
+                            <p>...</p>
+                        </div>
+                    </article>
+                    <article id="case2pl">
+                        <button type="button" class="collapse-header" id="case2-pl-head"><h4>[PL] Formularz dodawania pracownika nie zapisuje się poprawnie po uzupełnieniu pól w określonej kolejności</h4></button>
+                        <div class="collapse-content" id="case2-pl-cont">
+                            <h5>Impact</h5>
+                            <ul>
+                                <li>Poziom istotności: niski</li>
+                                <li>Priorytet: niski</li>
+                            </ul>
+                            <h5>Środowisko</h5>
+                            <ul>
+                                <li>DEV3, Desktop</li>
+                                <li>Model: ThinkPad T430</li>
+                                <li>OS: MS Windows 10 Pro, 64-bit, ver. 22H2</li>
+                                <li>Przeglądarka: Mozilla Firefox, ver. 123.0.1</li>
+                            </ul>
+                            <h5>Opis</h5>
+                            <p>...</p>
+                            <h5>Data</h5>
+                            <ul>
+                                <li>... (db: <span class="content-table-name">tablename</span>, id=xxxx)</li>
+                            </ul>
+                            <h5>Inwestygacja</h5>
+                            <p><span class="content-table-name">tablename</span> ...</p>
+                            <p>...</p>
+                            <h5>Prawdopodobna przyczyna</h5>
+                            <p>...</p>
+                        </div>
+                    </article>
+                </section>
+            </main>
+            <footer>last update: <time>20240418</time> | powered by <a href="https://pages.github.com/" target="_blank">pages.github.com</a></footer>
+        </div>
+        <script src='./script.js'></script>
+    </body>
+</html>
