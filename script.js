@@ -10,10 +10,10 @@ class BugCase {
     }
 }
 
-const BR_Case1_en = new BugCase(document.getElementById("case1-en-head"), document.getElementById("case1-en-cont"), "en");
-const BR_Case1_pl = new BugCase(document.getElementById("case1-pl-head"), document.getElementById("case1-pl-cont"), "pl");
-//const BR_Case2_en = new BugCase(document.getElementById("case2-en-head"), document.getElementById("case2-en-cont"), "en");
-//const BR_Case2_pl = new BugCase(document.getElementById("case2-pl-head"), document.getElementById("case2-pl-cont"), "pl");
+const BR_Case1_en = new BugCase(document.getElementById("br_case1-en-head"), document.getElementById("br_case1-en-cont"), "en");
+const BR_Case1_pl = new BugCase(document.getElementById("br_case1-pl-head"), document.getElementById("br_case1-pl-cont"), "pl");
+//const BR_Case2_en = new BugCase(document.getElementById("br_case2-en-head"), document.getElementById("br_case2-en-cont"), "en");
+//const BR_Case2_pl = new BugCase(document.getElementById("br_case2-pl-head"), document.getElementById("br_case2-pl-cont"), "pl");
 
 
 
