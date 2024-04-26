@@ -128,7 +128,7 @@ a {
     padding: 3px 6px;
 }
 
-article#case2en, article#case2pl {
+article#br_case2en, article#br_case2pl, article#tc_case2en, article#tc_case2pl {
     display: none;
 }
 

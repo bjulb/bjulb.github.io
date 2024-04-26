@@ -52,51 +52,31 @@
                     </header>
                     <h3>EXAMPLE 1 - PLAYLIST STATE RECOGNITION</h3>
                     <article id="tc_case1en">
-                        <button type="button" class="collapse-header" id="tc_case1-en-head"><h4>[EN] Newly added subdepartment with its employees is not visible in monthly reports for supervisors</h4></button>
+                        <button type="button" class="collapse-header" id="tc_case1-en-head"><h4>[EN]PLC-01-01001 | Recognition of public playlist with correct link</h4></button>
                         <div class="collapse-content" id="tc_case1-en-cont">
-                            <h5>Impact</h5>
+                            <h5>Pre-conditions</h5>
                             <ul>
-                                <li>Severity: low</li>
-                                <li>Priority: low</li>
+                                <li>browser installed</li>
+                                <li>example playlist is public</li>
+                                <li>Spotify API is up and running</li>
                             </ul>
-                            <h5>Environtment</h5>
-                            <ul>
-                                <li>DEV3, Desktop</li>
-                                <li>Model: ThinkPad T430</li>
-                                <li>OS: MS Windows 10 Pro, 64-bit, ver. 22H2</li>
-                                <li>Browser: Mozilla Firefox, ver. 123.0.1</li>
-                            </ul>
-                            <h5>Description</h5>
-                            <p>Supervisor Poniatowski from department 1D sees only 5 managers in the monthly report for January 2024.</p>
-                            <p>In Unit Management panel there are 6 subdepartments assigned to depatment 1D and each of them has assigned its respecitve manager. Supervisor should see all of them in the report.</p>
-                            <p>The manager not visible in report is Tyszkiewicz from subdepartment 12PU.</p>
-                            <p>Error occurrs on the page and in the exported excel file.</p>
-                            <h5>Steps to reproduce</h5>
+                            <h5>Test steps</h5>
                             <ol>
-                                <li>Go to the main site.</li>
-                                <li>Login as poniatowskij.</li>
-                                <li>In the menu click "Reports".</li>
-                                <li>On the main reports page click "Monthly Reports".</li>
-                                <li>Click in the field "year" and choose "2024" and from the dropdown list.</li>
-                                <li>Click in the field "month" and choose "January" from the dropdown list.</li>
-                                <li>Click "Generate" button.</li>
+                                <li>Go to the app page.</li>
+                                <li>Enter playlists's link to the pl-link field.</li>
+                                <li>Click "Submit" button.</li>
+                                <li>Verify the message showing on the screen.</li>
                             </ol>
-                            <p>Expected result: the report contains 6 rows, each for separate subdepartment and its respective manager.</p>
-                            <p>Actual result: the report contains only 5 rows - 1 subdepartment/manager is missing.</p>
-                            <h5>Data</h5>
-                            <ul>
-                                <li>Supevisor: Poniatowski (db: <span class="content-table-name">users</span>, id=8758), department 1D (db: <span class="content-table-name">regiments</span>, id=2)</li>
-                                <li>Manager: Tyszkiewicz (db: <span class="content-table-name">users</span>, id=11876), subdepartment 12PU (db: <span class="content-table-name">regiments</span>, id=19)</li>
-                                <li>Report: Monthly Reports, January 2024, (db: <span class="content-table-name">reports_structure</span>, id=28)</li>
-                            </ul>
-                            <h5>Investigation</h5>
-                            <p><span class="content-table-name">regiments</span> table: 6 subdepartmens assigned to 1D</p>
-                            <p><span class="content-table-name">reports_structure_regiments</span> table: for January 2024 only 5 subdepartmens were assigned to 1D - 12PU not among them</p>
-                            <p>January 2024 has been opened in the system on 2024-01-01 - same day as records w <span class="content-table-name">reports_structure</span> were created.</p>
-                            <p>Subdepartment 12PU has been created on 2024-01-10 in <span class="content-table-name">regiments</span> table - so 10 days after opening January 2024 reports in the system.</p>
-                            <p>After manually adding 12PU to table <span class="content-table-name">reports_structure_regiments</span>, Tyszkiewicz is now visible in the reports - on the page and in the exported excel file.</p>
-                            <h5>Probable cause</h5>
-                            <p><span class="content-table-name">reports_structure_regiments</span> table is not updated automatically to reflect changes in <span class="content-table-name">regiments</span> table - but it should be, regardless of which day of the month new subdepartment is added.</p>
+                            <h5>Test data</h5>
+                            <p>playlist link:</p>
+                            <h5>Expected results</h5>
+                            <ol>
+                                <li>Submit button is clickable.</li>
+                                <li>The app is showing the message: PLEASE, FIND BELOW DETAILS OF THE PROVIDED PLAYLIST.</li>
+                            </ol>
+                            <h5>Actual result</h5>
+                            <p>Submit button is clickable. App is showing the correct message.</p>
+                            <h5>Status: PASSED</h5>
                         </div>
                     </article>
                     <article id="tc_case1pl">
@@ -146,9 +126,9 @@
                     </article>
                     <br><br>                  
                     <!--<h3>EXAMPLE 2 - FORM</h3>-->
-                    <article id="case2en">
-                        <button type="button" class="collapse-header" id="case2-en-head"><h4>[EN] 'Create new employee' form saved incorrectly after filling fields in specific order</h4></button>
-                        <div class="collapse-content" id="case2-en-cont">
+                    <article id="tc_case2en">
+                        <button type="button" class="collapse-header" id="tc_case2-en-head"><h4>[EN] 'Create new employee' form saved incorrectly after filling fields in specific order</h4></button>
+                        <div class="collapse-content" id="tc_case2-en-cont">
                             <h5>Impact</h5>
                             <ul>
                                 <li>Severity: low</li>
@@ -174,9 +154,9 @@
                             <p>...</p>
                         </div>
                     </article>
-                    <article id="case2pl">
-                        <button type="button" class="collapse-header" id="case2-pl-head"><h4>[PL] Formularz dodawania pracownika nie zapisuje się poprawnie po uzupełnieniu pól w określonej kolejności</h4></button>
-                        <div class="collapse-content" id="case2-pl-cont">
+                    <article id="tc_case2pl">
+                        <button type="button" class="collapse-header" id="tc_case2-pl-head"><h4>[PL] Formularz dodawania pracownika nie zapisuje się poprawnie po uzupełnieniu pól w określonej kolejności</h4></button>
+                        <div class="collapse-content" id="tc_case2-pl-cont">
                             <h5>Impact</h5>
                             <ul>
                                 <li>Poziom istotności: niski</li>
