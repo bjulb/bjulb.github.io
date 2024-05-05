@@ -50,9 +50,9 @@
                     <header>
                         <h2>test cases</h2>
                     </header>
-                    <h3>EXAMPLE 1 - PLAYLIST STATE RECOGNITION</h3>
+                    <h3>SUITE 1 - PLAYLIST STATUS RECOGNITION</h3>
                     <article id="tc_case1en">
-                        <button type="button" class="collapse-header" id="tc_case1-en-head"><h4>[EN]PLC-01-01001 | Recognition of public playlist with correct link</h4></button>
+                        <button type="button" class="collapse-header" id="tc_case1-en-head"><h4>[EN] SPC-01 | public playlist with correct link - recognition</h4></button>
                         <div class="collapse-content" id="tc_case1-en-cont">
                             <h5>Pre-conditions</h5>
                             <ul>
@@ -60,6 +60,8 @@
                                 <li>example playlist is public</li>
                                 <li>Spotify API is up and running</li>
                             </ul>
+                            <h5>Test input</h5>
+                            <p>playlist link: XYZ</p>
                             <h5>Test steps</h5>
                             <ol>
                                 <li>Go to the app page.</li>
@@ -67,8 +69,6 @@
                                 <li>Click "Submit" button.</li>
                                 <li>Verify the message showing on the screen.</li>
                             </ol>
-                            <h5>Test data</h5>
-                            <p>playlist link:</p>
                             <h5>Expected results</h5>
                             <ol>
                                 <li>Submit button is clickable.</li>
@@ -79,6 +79,120 @@
                             <h5>Status: PASSED</h5>
                         </div>
                     </article>
+                    <article id="tc_case2en">
+                        <button type="button" class="collapse-header" id="tc_case2-en-head"><h4>[EN] SPC-02 | Public playlist with correct ID - recognition</h4></button>
+                        <div class="collapse-content" id="tc_case2-en-cont">
+                            <h5>Pre-conditions</h5>
+                            <ul>
+                                <li>browser installed</li>
+                                <li>example playlist is public</li>
+                                <li>Spotify API is up and running</li>
+                            </ul>
+                            <h5>Test input</h5>
+                            <p>playlist link: XYZ</p>
+                            <h5>Test steps</h5>
+                            <ol>
+                                <li>Go to the app page.</li>
+                                <li>Enter playlists's link to the pl-link field.</li>
+                                <li>Click "Submit" button.</li>
+                                <li>Verify the message showing on the screen.</li>
+                            </ol>
+                            <h5>Expected results</h5>
+                            <ol>
+                                <li>Submit button is clickable.</li>
+                                <li>The app is showing the message: PLEASE, FIND BELOW DETAILS OF THE PROVIDED PLAYLIST.</li>
+                            </ol>
+                            <h5>Actual result</h5>
+                            <p>Submit button is clickable. App is showing the correct message.</p>
+                            <h5>Status: PASSED</h5>
+                        </div>
+                    </article>
+                    <article id="tc_case3en">
+                        <button type="button" class="collapse-header" id="tc_case3-en-head"><h4>[EN] SPC-03 | Private playlist with correct link - recognition</h4></button>
+                        <div class="collapse-content" id="tc_case3-en-cont">
+                            <h5>Pre-conditions</h5>
+                            <ul>
+                                <li>browser installed</li>
+                                <li>example playlist is public</li>
+                                <li>Spotify API is up and running</li>
+                            </ul>
+                            <h5>Test input</h5>
+                            <p>playlist link: XYZ</p>
+                            <h5>Test steps</h5>
+                            <ol>
+                                <li>Go to the app page.</li>
+                                <li>Enter playlists's link to the pl-link field.</li>
+                                <li>Click "Submit" button.</li>
+                                <li>Verify the message showing on the screen.</li>
+                            </ol>
+                            <h5>Expected results</h5>
+                            <ol>
+                                <li>Submit button is clickable.</li>
+                                <li>The app is showing the message: PLEASE, FIND BELOW DETAILS OF THE PROVIDED PLAYLIST.</li>
+                            </ol>
+                            <h5>Actual result</h5>
+                            <p>Submit button is clickable. App is showing the correct message.</p>
+                            <h5>Status: PASSED</h5>
+                        </div>
+                    </article>
+                    <article id="tc_case4en">
+                        <button type="button" class="collapse-header" id="tc_case4-en-head"><h4>[EN] SPC-04 | Private playlist with correct ID - recognition</h4></button>
+                        <div class="collapse-content" id="tc_case4-en-cont">
+                            <h5>Pre-conditions</h5>
+                            <ul>
+                                <li>browser installed</li>
+                                <li>example playlist is public</li>
+                                <li>Spotify API is up and running</li>
+                            </ul>
+                            <h5>Test input</h5>
+                            <p>playlist link: XYZ</p>
+                            <h5>Test steps</h5>
+                            <ol>
+                                <li>Go to the app page.</li>
+                                <li>Enter playlists's link to the pl-link field.</li>
+                                <li>Click "Submit" button.</li>
+                                <li>Verify the message showing on the screen.</li>
+                            </ol>
+                            <h5>Expected results</h5>
+                            <ol>
+                                <li>Submit button is clickable.</li>
+                                <li>The app is showing the message: PLEASE, FIND BELOW DETAILS OF THE PROVIDED PLAYLIST.</li>
+                            </ol>
+                            <h5>Actual result</h5>
+                            <p>Submit button is clickable. App is showing the correct message.</p>
+                            <h5>Status: PASSED</h5>
+                        </div>
+                    </article>
+                    <article id="tc_case5en">
+                        <button type="button" class="collapse-header" id="tc_case5-en-head"><h4>[EN] Testlink and Testrail downloads and files</h4></button>
+                        <div class="collapse-content" id="tc_case5-en-cont">
+                            <h5>Pre-conditions</h5>
+                            <ul>
+                                <li>browser installed</li>
+                                <li>example playlist is public</li>
+                                <li>Spotify API is up and running</li>
+                            </ul>
+                            <h5>Test input</h5>
+                            <p>playlist link: XYZ</p>
+                            <h5>Test steps</h5>
+                            <ol>
+                                <li>Go to the app page.</li>
+                                <li>Enter playlists's link to the pl-link field.</li>
+                                <li>Click "Submit" button.</li>
+                                <li>Verify the message showing on the screen.</li>
+                            </ol>
+                            <h5>Expected results</h5>
+                            <ol>
+                                <li>Submit button is clickable.</li>
+                                <li>The app is showing the message: PLEASE, FIND BELOW DETAILS OF THE PROVIDED PLAYLIST.</li>
+                            </ol>
+                            <h5>Actual result</h5>
+                            <p>Submit button is clickable. App is showing the correct message.</p>
+                            <h5>Status: PASSED</h5>
+                        </div>
+                    </article>
+                    <br><br>
+                    <h3>ZESTAW 1 - PLAYLIST STATUS RECOGNITION</h3>
                     <article id="tc_case1pl">
                         <button type="button" class="collapse-header" id="case1-pl-head"><h4>[PL] Raport miesięczny przełożonego nie pokazuje podwładnych z nowo dodanych poddziałów</h4></button>
                         <div class="collapse-content" id="tc_case1-pl-cont">

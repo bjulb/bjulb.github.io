@@ -23,6 +23,10 @@ const BR_Case1_pl = new BugCase(document.getElementById("br_case1-pl-head"), doc
 
 
 const TC_Case1_en = new TestCase(document.getElementById("tc_case1-en-head"), document.getElementById("tc_case1-en-cont"), "en");
+const TC_Case2_en = new TestCase(document.getElementById("tc_case2-en-head"), document.getElementById("tc_case2-en-cont"), "en");
+const TC_Case3_en = new TestCase(document.getElementById("tc_case3-en-head"), document.getElementById("tc_case3-en-cont"), "en");
+const TC_Case4_en = new TestCase(document.getElementById("tc_case4-en-head"), document.getElementById("tc_case4-en-cont"), "en");
+const TC_Case5_en = new TestCase(document.getElementById("tc_case5-en-head"), document.getElementById("tc_case5-en-cont"), "en");
 //const TC_Case1_pl = new TestCase(document.getElementById("tc_case1-pl-head"), document.getElementById("tc_case1-pl-cont"), "pl");
 
 
@@ -64,9 +68,30 @@ BR_Case1_pl.head.onclick = () => {
 
 //Test Cases Collapse
 if (TC_Case1_en.head) {
-TC_Case1_en.head.onclick = () => {
-    collapseArticle(TC_Case1_en.head, TC_Case1_en.cont);
-}};
+    TC_Case1_en.head.onclick = () => {
+        collapseArticle(TC_Case1_en.head, TC_Case1_en.cont);
+    }};
+
+if (TC_Case2_en.head) {
+    TC_Case2_en.head.onclick = () => {
+        collapseArticle(TC_Case2_en.head, TC_Case2_en.cont);
+    }};
+
+if (TC_Case3_en.head) {
+    TC_Case3_en.head.onclick = () => {
+        collapseArticle(TC_Case3_en.head, TC_Case3_en.cont);
+    }};
+
+if (TC_Case4_en.head) {
+    TC_Case4_en.head.onclick = () => {
+        collapseArticle(TC_Case4_en.head, TC_Case4_en.cont);
+    }};
+
+if (TC_Case5_en.head) {
+    TC_Case5_en.head.onclick = () => {
+        collapseArticle(TC_Case5_en.head, TC_Case5_en.cont);
+    }};
+        
 /*
 TC_Case1_pl.head.onclick = () => {
     collapseArticle(TC_Case1_pl.head, TC_Case1_pl.cont);
