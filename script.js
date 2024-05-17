@@ -1,15 +1,15 @@
 //-----------------------OBJECTS AND CLASSES
-//Bug Report and Test Cases Cases Objects
 
 
-class BugCase {
+//-----MAIN ITEM TO COLLAPSE
+class ItemCase {
     constructor(head, cont, lang) {
         this.head = head;
         this.cont = cont;
         this.lang = lang;
         //this.cont.style.display = "none";
     }};
-
+/*
 class TestCase {
     constructor(head, cont, lang) {
         this.head = head;
@@ -17,31 +17,32 @@ class TestCase {
         this.lang = lang;
         //this.cont.style.display = "none";
     }};
+*/
 
-const BR_Case1_en = new BugCase(document.getElementById("br_case1-en-head"), document.getElementById("br_case1-en-cont"), "en");
-const BR_Case1_pl = new BugCase(document.getElementById("br_case1-pl-head"), document.getElementById("br_case1-pl-cont"), "pl");
-
-
-const TC_Case1_en = new TestCase(document.getElementById("tc_case1-en-head"), document.getElementById("tc_case1-en-cont"), "en");
-const TC_Case2_en = new TestCase(document.getElementById("tc_case2-en-head"), document.getElementById("tc_case2-en-cont"), "en");
-const TC_Case3_en = new TestCase(document.getElementById("tc_case3-en-head"), document.getElementById("tc_case3-en-cont"), "en");
-const TC_Case4_en = new TestCase(document.getElementById("tc_case4-en-head"), document.getElementById("tc_case4-en-cont"), "en");
-const TC_Case5_en = new TestCase(document.getElementById("tc_case5-en-head"), document.getElementById("tc_case5-en-cont"), "en");
-const TC_Case6_en = new TestCase(document.getElementById("tc_case6-en-head"), document.getElementById("tc_case6-en-cont"), "en");
-const TC_Case7_en = new TestCase(document.getElementById("tc_case7-en-head"), document.getElementById("tc_case7-en-cont"), "en");
-const TC_Case8_en = new TestCase(document.getElementById("tc_case8-en-head"), document.getElementById("tc_case8-en-cont"), "en");
-const TC_Case9_en = new TestCase(document.getElementById("tc_case9-en-head"), document.getElementById("tc_case9-en-cont"), "en");
-//const TC_Case1_pl = new TestCase(document.getElementById("tc_case1-pl-head"), document.getElementById("tc_case1-pl-cont"), "pl");
-
+//-----Bug Report Cases
+const BR_Case1_en = new ItemCase(document.getElementById("br_case1-en-head"), document.getElementById("br_case1-en-cont"), "en");
+const BR_Case1_pl = new ItemCase(document.getElementById("br_case1-pl-head"), document.getElementById("br_case1-pl-cont"), "pl");
 
 //const BR_Case2_en = new BugCase(document.getElementById("br_case2-en-head"), document.getElementById("br_case2-en-cont"), "en");
 //const BR_Case2_pl = new BugCase(document.getElementById("br_case2-pl-head"), document.getElementById("br_case2-pl-cont"), "pl");
 
 
-//---------------------FUNCTIONS
-//-------Collapse Function
+//-----Test Cases  
+const TC_Case1_en = new ItemCase(document.getElementById("tc_case1-en-head"), document.getElementById("tc_case1-en-cont"), "en");
+const TC_Case2_en = new ItemCase(document.getElementById("tc_case2-en-head"), document.getElementById("tc_case2-en-cont"), "en");
+const TC_Case3_en = new ItemCase(document.getElementById("tc_case3-en-head"), document.getElementById("tc_case3-en-cont"), "en");
+const TC_Case4_en = new ItemCase(document.getElementById("tc_case4-en-head"), document.getElementById("tc_case4-en-cont"), "en");
+const TC_Case5_en = new ItemCase(document.getElementById("tc_case5-en-head"), document.getElementById("tc_case5-en-cont"), "en");
+const TC_Case6_en = new ItemCase(document.getElementById("tc_case6-en-head"), document.getElementById("tc_case6-en-cont"), "en");
+//case 7 does not exist
+const TC_Case8_en = new ItemCase(document.getElementById("tc_case8-en-head"), document.getElementById("tc_case8-en-cont"), "en");
+const TC_Case9_en = new ItemCase(document.getElementById("tc_case9-en-head"), document.getElementById("tc_case9-en-cont"), "en");
 
-function collapseArticle(head, cont) {
+
+//---------------------FUNCTIONS
+//-----Collapse Function
+
+function collapseCase(head, cont) {
     if (cont.style.display == "none") {
         cont.style.display = "block";
         head.style.fontWeight = "bold";
@@ -53,68 +54,44 @@ function collapseArticle(head, cont) {
     }
 }
 
-
+function reloadCase(item) {
+    if (item.head) {
+        item.head.onclick = () => {
+            collapseCase(item.head, item.cont);
+        }
+    }
+}
 
 
 //----------------FUNCTION CALLS
 
-//Bug Reports Collapse
+//-----Bug Reports Collapse
+reloadCase(BR_Case1_en);
+reloadCase(BR_Case1_pl);
 
+
+/*
 if (BR_Case1_en.head) {
-BR_Case1_en.head.onclick = () => {
-    collapseArticle(BR_Case1_en.head, BR_Case1_en.cont);
-}};
+    BR_Case1_en.head.onclick = () => {
+        collapseArticle(BR_Case1_en.head, BR_Case1_en.cont);
+    }};
 
 if (BR_Case1_pl.head) {
-BR_Case1_pl.head.onclick = () => {
-    collapseArticle(BR_Case1_pl.head, BR_Case1_pl.cont);
-}};
+    BR_Case1_pl.head.onclick = () => {
+        collapseArticle(BR_Case1_pl.head, BR_Case1_pl.cont);
+    }};
+*/
 
-//Test Cases Collapse
-if (TC_Case1_en.head) {
-    TC_Case1_en.head.onclick = () => {
-        collapseArticle(TC_Case1_en.head, TC_Case1_en.cont);
-    }};
+//-----Test Cases Collapse
 
-if (TC_Case2_en.head) {
-    TC_Case2_en.head.onclick = () => {
-        collapseArticle(TC_Case2_en.head, TC_Case2_en.cont);
-    }};
-
-if (TC_Case3_en.head) {
-    TC_Case3_en.head.onclick = () => {
-        collapseArticle(TC_Case3_en.head, TC_Case3_en.cont);
-    }};
-
-if (TC_Case4_en.head) {
-    TC_Case4_en.head.onclick = () => {
-        collapseArticle(TC_Case4_en.head, TC_Case4_en.cont);
-    }};
-
-if (TC_Case5_en.head) {
-    TC_Case5_en.head.onclick = () => {
-        collapseArticle(TC_Case5_en.head, TC_Case5_en.cont);
-    }};
- 
-if (TC_Case6_en.head) {
-    TC_Case6_en.head.onclick = () => {
-        collapseArticle(TC_Case6_en.head, TC_Case6_en.cont);
-    }};
-
-if (TC_Case7_en.head) {
-    TC_Case7_en.head.onclick = () => {
-        collapseArticle(TC_Case7_en.head, TC_Case7_en.cont);
-    }};
-
-if (TC_Case8_en.head) {
-    TC_Case8_en.head.onclick = () => {
-        collapseArticle(TC_Case8_en.head, TC_Case8_en.cont);
-    }};
-
-if (TC_Case9_en.head) {
-    TC_Case9_en.head.onclick = () => {
-        collapseArticle(TC_Case9_en.head, TC_Case9_en.cont);
-    }};
+reloadCase(TC_Case1_en);
+reloadCase(TC_Case2_en);
+reloadCase(TC_Case3_en);
+reloadCase(TC_Case4_en);
+reloadCase(TC_Case5_en);
+reloadCase(TC_Case6_en);
+//case 7 does not exist
+reloadCase(TC_Case8_en);
 
 
 /*
