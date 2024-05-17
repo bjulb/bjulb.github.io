@@ -30,6 +30,14 @@ const TC_Case6_en = new ItemCase(document.getElementById("tc_case6-en-head"), do
 const TC_Case8_en = new ItemCase(document.getElementById("tc_case8-en-head"), document.getElementById("tc_case8-en-cont"), "en");
 const TC_Case9_en = new ItemCase(document.getElementById("tc_case9-en-head"), document.getElementById("tc_case9-en-cont"), "en");
 
+const TC_Case1_pl = new ItemCase(document.getElementById("tc_case1-pl-head"), document.getElementById("tc_case1-pl-cont"), "pl");
+const TC_Case2_pl = new ItemCase(document.getElementById("tc_case2-pl-head"), document.getElementById("tc_case2-pl-cont"), "pl");
+const TC_Case3_pl = new ItemCase(document.getElementById("tc_case3-pl-head"), document.getElementById("tc_case3-pl-cont"), "pl");
+const TC_Case4_pl = new ItemCase(document.getElementById("tc_case4-pl-head"), document.getElementById("tc_case4-pl-cont"), "pl");
+const TC_Case5_pl = new ItemCase(document.getElementById("tc_case5-pl-head"), document.getElementById("tc_case5-pl-cont"), "pl");
+const TC_Case6_pl = new ItemCase(document.getElementById("tc_case6-pl-head"), document.getElementById("tc_case6-pl-cont"), "pl");
+const TC_Case7_pl = new ItemCase(document.getElementById("tc_case7-pl-head"), document.getElementById("tc_case7-pl-cont"), "pl");
+
 
 //---------------------FUNCTIONS
 //-----Collapse and Reload Functions for Cases
@@ -70,3 +78,11 @@ reloadCase(TC_Case5_en);
 reloadCase(TC_Case6_en);
 //case 7 does not exist
 reloadCase(TC_Case8_en);
+
+reloadCase(TC_Case1_pl);
+reloadCase(TC_Case2_pl);
+reloadCase(TC_Case3_pl);
+reloadCase(TC_Case4_pl);
+reloadCase(TC_Case5_pl);
+reloadCase(TC_Case6_pl);
+reloadCase(TC_Case7_pl);

@@ -54,7 +54,7 @@
                     <article id="tc_case1en">
                         <button type="button" class="collapse-header" id="tc_case1-en-head"><h4>[EN] SPC-01 | Public playlist with correct link - recognition</h4></button>
                         <div class="collapse-content" id="tc_case1-en-cont">
-                            <h5>Impotance</h5>
+                            <h5>Importance</h5>
                             <p>High</p>
                             <h5>Pre-conditions</h5>
                             <ul>
@@ -81,7 +81,7 @@
                     <article id="tc_case2en">
                         <button type="button" class="collapse-header" id="tc_case2-en-head"><h4>[EN] SPC-02 | Public playlist with correct ID - recognition</h4></button>
                         <div class="collapse-content" id="tc_case2-en-cont">
-                            <h5>Impotance</h5>
+                            <h5>Importance</h5>
                             <p>High</p>
                             <h5>Pre-conditions</h5>
                             <ul>
@@ -108,7 +108,7 @@
                     <article id="tc_case3en">
                         <button type="button" class="collapse-header" id="tc_case3-en-head"><h4>[EN] SPC-03 | Private playlist with correct link - recognition</h4></button>
                         <div class="collapse-content" id="tc_case3-en-cont">
-                            <h5>Impotance</h5>
+                            <h5>Importance</h5>
                             <p>High</p>
                             <h5>Pre-conditions</h5>
                             <ul>
@@ -135,7 +135,7 @@
                     <article id="tc_case4en">
                         <button type="button" class="collapse-header" id="tc_case4-en-head"><h4>[EN] SPC-04 | Private playlist with correct ID - recognition</h4></button>
                         <div class="collapse-content" id="tc_case4-en-cont">
-                            <h5>Impotance</h5>
+                            <h5>Importance</h5>
                             <p>High</p>
                             <h5>Pre-conditions</h5>
                             <ul>
@@ -162,7 +162,7 @@
                     <article id="tc_case5en">
                         <button type="button" class="collapse-header" id="tc_case5-en-head"><h4>[EN] SPC-05 | Playlist with incorrect link - recognition</h4></button>
                         <div class="collapse-content" id="tc_case5-en-cont">
-                            <h5>Impotance</h5>
+                            <h5>Importance</h5>
                             <p>High</p>
                             <h5>Pre-conditions</h5>
                             <ul>
@@ -189,7 +189,7 @@
                     <article id="tc_case6en">
                         <button type="button" class="collapse-header" id="tc_case6-en-head"><h4>[EN] SPC-06 | Playlist with incorrect ID - recognition</h4></button>
                         <div class="collapse-content" id="tc_case6-en-cont">
-                            <h5>Impotance</h5>
+                            <h5>Importance</h5>
                             <p>High</p>
                             <h5>Pre-conditions</h5>
                             <ul>
@@ -216,7 +216,7 @@
                     <article id="tc_case8en">
                         <button type="button" class="collapse-header" id="tc_case8-en-head"><h4>[EN] SPC-08 | Playlist with empty field - recognition</h4></button>
                         <div class="collapse-content" id="tc_case8-en-cont">
-                            <h5>Impotance</h5>
+                            <h5>Importance</h5>
                             <p>High</p>
                             <h5>Pre-conditions</h5>
                             <ul>
@@ -241,7 +241,7 @@
                     <article id="tc_case9en">
                         <button type="button" class="collapse-header" id="tc_case9-en-head"><h4>[EN] Testlink and Testrail downloads and files</h4></button>
                         <div class="collapse-content" id="tc_case9-en-cont">
-                            <h5>Impotance</h5>
+                            <h5>Importance</h5>
                             <p>High</p>
                             <h5>Pre-conditions</h5>
                             <ul>
@@ -266,108 +266,68 @@
                         </div>
                     </article>
                     <br><br>
-                    <h3>ZESTAW 1 - PLAYLIST STATUS RECOGNITION</h3>
+                    <h3>ZESTAW 1 - ROZPOZNAWANIE STATUSU PLAYLISTY</h3>
                     <article id="tc_case1pl">
-                        <button type="button" class="collapse-header" id="case1-pl-head"><h4>[PL] Raport miesięczny przełożonego nie pokazuje podwładnych z nowo dodanych poddziałów</h4></button>
+                        <button type="button" class="collapse-header" id="tc_case1-pl-head"><h4>[PL] SPC - | Publiczna playlista z prawidłowym linkiem - rozpoznanie</h4></button>
                         <div class="collapse-content" id="tc_case1-pl-cont">
-                            <h5>Impact</h5>
+                            <h5>Importance</h5>
+                            <p>Wysoka</p>
+                            <h5>Pre-conditions</h5>
                             <ul>
-                                <li>Poziom istotności: niski</li>
-                                <li>Priorytet: niski</li>
+                                <li>zainstalowana przeglądarka</li>
+                                <li>przykładowa playlista jest publiczna</li>
+                                <li>Spotify API działa</li>
                             </ul>
-                            <h5>Środowisko</h5>
-                            <ul>
-                                <li>DEV3, Desktop</li>
-                                <li>Model: ThinkPad T430</li>
-                                <li>OS: MS Windows 10 Pro, 64-bit, ver. 22H2</li>
-                                <li>Przeglądarka: Mozilla Firefox, ver. 123.0.1</li>
-                            </ul>
-                            <h5>Opis</h5>
-                            <p>W raporcie za miesiąc styczeń 2024 Poniatowski widzi tylko 5 bezpośrednich podwładnych.</p>
-                            <p>W Zarządzaniu Jednostkami do jego działu przypisanych jest 6 poddziałów i każdy z nich ma przełożonego - i tylu też powinien on widzieć w raporcie.</p>
-                            <p>Brakującym podwładnym jest Tyszkiewicz z poddziału 12PU.</p>
-                            <p>Błąd występuje tak na stronie jak i w generowanym pliku excel.</p>
-                            <h5>Kroki do reprodukcji</h5>
+                            <h5>Test input</h5>
+                            <p>link do playlisty: https://open.spotify.com/playlist/28Ffkndp6PP79X5LgFTXcZ</p>
+                            <h5>Test steps</h5>
                             <ol>
-                                <li>Login as Poniatowski.</li>
-                                <li>In the menu click "Reports".</li>
-                                <li>On the main reports page click "Monthly Reports".</li>
-                                <li>Click in field "year" and choose "2024" and from the dropdown list.</li>
-                                <li>Click in field "month" and choose "January" from the dropdown list.</li>
-                                <li>Click "Generate" button.</li>
+                                <li>Go to the app page.</li>
+                                <li>Wprowadzić link do playlist w pole "Enter public playlist link or ID".</li>
+                                <li>Kliknąć przycisk "Send".</li>
+                                <li>Zweryfikować treść wiadomości na ekranie.</li>
                             </ol>
-                            <h5>Dane</h5>
-                            <ul>
-                                <li>Przełożony: Poniatowski (db: <span class="content-table-name">users</span>, id=8758), dział 1D (db: <span class="content-table-name">regiments</span>, id=2)</li>
-                                <li>Podwładny: Tyszkiewicz (db: <span class="content-table-name">users</span>, id=11876), poddział 12PU (db: <span class="content-table-name">regiments</span>, id=19)</li>
-                                <li>Raport: Raporty Miesięczne, styczeń 2024, (db: <span class="content-table-name">reports_structure</span>, id=28)</li>
-                            </ul>                                     
-                            <h5>Inwestygacja</h5>
-                            <p>Tabela <span class="content-table-name">regiments</span>: do 1D przypisanych jest 6 poddziałów.</p>
-                            <p>Tabela <span class="content-table-name">reports_structure_regiments</span>: dla stycznia 2024 do 1D przypisanych jest 5 poddziałów - brakuje 12PU.</p>
-                            <p>Miesiąc styczeń 2024 został otwarty w systemie 2024-01-01, wtedy też utworzono rekordy w <span class="content-table-name">reports_structure</span>.</p>
-                            <p>Poddział 12PU został utworzony 2024-01-10 w <span class="content-table-name">regiments</span> - czyli już po otwarciu stycznia w systemie.</p>
-                            <p>Po ręcznym dodaniu 12PU w tabeli <span class="content-table-name">reports_structure_regiments</span>, Tyszkiewicz jest widoczny w raporcie w systemie - tak na stronie jak i w generowanym excelu.</p>
-                            <h5>Prawdopodobna przyczyna</h5>
-                            <p>Tabela <span class="content-table-name">reports_structure_regiments</span> nie aktualizuje się automatycznie zgodnie ze zmianami w <span class="content-table-name">regiments</span> - a powinna, niezależnie od tego, kiedy w danym miesiącu został dodany nowy poddział.</p>
-                        </div>
-                    </article>
-                    <br><br>                  
-                    <!--<h3>EXAMPLE 2 - FORM</h3>-->
-                    <article id="tc_case2en">
-                        <button type="button" class="collapse-header" id="tc_case2-en-head"><h4>[EN] 'Create new employee' form saved incorrectly after filling fields in specific order</h4></button>
-                        <div class="collapse-content" id="tc_case2-en-cont">
-                            <h5>Impact</h5>
-                            <ul>
-                                <li>Severity: low</li>
-                                <li>Priority: low</li>
-                            </ul>
-                            <h5>Environtment</h5>
-                            <ul>
-                                <li>DEV3, Desktop</li>
-                                <li>Model: ThinkPad T430</li>
-                                li>OS: MS Windows 10 Pro, 64-bit, ver. 22H2</li>
-                                <li>Browser: Mozilla Firefox, ver. 123.0.1</li>
-                            </ul>
-                            <h5>Description</h5>
-                            <p>...</p>
-                            <h5>Data</h5>
-                            <ul>
-                                <li>... (db: <span class="content-table-name">tablename</span>, id=xxxx)</li>
-                            </ul>
-                            <h5>Investigation</h5>
-                            <p><span class="content-table-name">tablename</span> ...</p>
-                            <p>...</p>
-                            <h5>Probable cause</h5>
-                            <p>...</p>
+                            <h5>Oczekiwany wynik</h5>
+                            <ol>
+                                <li>Przycisk "Send" jest klikalny.</li>
+                                <li>Pojawia się komunikat: PLEASE, FIND BELOW DETAILS OF THE REQUESTED PLAYLIST.</li>
+                            </ol>
                         </div>
                     </article>
                     <article id="tc_case2pl">
-                        <button type="button" class="collapse-header" id="tc_case2-pl-head"><h4>[PL] Formularz dodawania pracownika nie zapisuje się poprawnie po uzupełnieniu pól w określonej kolejności</h4></button>
+                        <button type="button" class="collapse-header" id="tc_case2-pl-head"><h4>[PL] SPC - | Publiczna playlista z prawidłowym ID - rozpoznanie</h4></button>
                         <div class="collapse-content" id="tc_case2-pl-cont">
-                            <h5>Impact</h5>
-                            <ul>
-                                <li>Poziom istotności: niski</li>
-                                <li>Priorytet: niski</li>
-                            </ul>
-                            <h5>Środowisko</h5>
-                            <ul>
-                                <li>DEV3, Desktop</li>
-                                <li>Model: ThinkPad T430</li>
-                                <li>OS: MS Windows 10 Pro, 64-bit, ver. 22H2</li>
-                                <li>Przeglądarka: Mozilla Firefox, ver. 123.0.1</li>
-                            </ul>
-                            <h5>Opis</h5>
-                            <p>...</p>
-                            <h5>Data</h5>
-                            <ul>
-                                <li>... (db: <span class="content-table-name">tablename</span>, id=xxxx)</li>
-                            </ul>
-                            <h5>Inwestygacja</h5>
-                            <p><span class="content-table-name">tablename</span> ...</p>
-                            <p>...</p>
-                            <h5>Prawdopodobna przyczyna</h5>
-                            <p>...</p>
+                                                        
+                        </div>
+                    </article>
+                    <article id="tc_case3pl">
+                        <button type="button" class="collapse-header" id="tc_case3-pl-head"><h4>[PL] SPC - | Prywatna z prawidłowym linkeim - rozpoznanie</h4></button>
+                        <div class="collapse-content" id="tc_case3-pl-cont">
+                                                        
+                        </div>
+                    </article>
+                    <article id="tc_case4pl">
+                        <button type="button" class="collapse-header" id="tc_case4-pl-head"><h4>[PL] SPC - | Prywatna playlista z prawidłowym ID - rozpoznanie</h4></button>
+                        <div class="collapse-content" id="tc_case4-pl-cont">
+                                                        
+                        </div>
+                    </article>
+                    <article id="tc_case5pl">
+                        <button type="button" class="collapse-header" id="tc_case5-pl-head"><h4>[PL] SPC - | Playlista z nieprawidłowym linkiem - rozpoznanie</h4></button>
+                        <div class="collapse-content" id="tc_case5-pl-cont">
+                                                        
+                        </div>
+                    </article>
+                    <article id="tc_case6pl">
+                        <button type="button" class="collapse-header" id="tc_case6-pl-head"><h4>[PL] SPC - | Playlista z nieprawidłowym ID - rozpoznanie</h4></button>
+                        <div class="collapse-content" id="tc_case6-pl-cont">
+                                                        
+                        </div>
+                    </article>
+                    <article id="tc_case7pl">
+                        <button type="button" class="collapse-header" id="tc_case7-pl-head"><h4>[PL] SPC - | Playlista z pustym polem - rozpoznanie</h4></button>
+                        <div class="collapse-content" id="tc_case7-pl-cont">
+                                                        
                         </div>
                     </article>
                 </section>
@@ -375,6 +335,6 @@
             <footer>last update: <time>20240418</time> | powered by <a href="https://pages.github.com/" target="_blank">pages.github.com</a></footer>
         </div>
         <script src='./script.js'></script>
-        <script src='./tc.js'></script>
+        <!--<script src='./tc.js'></script>-->
     </body>
 </html>
