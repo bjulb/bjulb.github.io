@@ -52,8 +52,10 @@
                     </header>
                     <h3>SUITE 1 - PLAYLIST STATUS RECOGNITION</h3>
                     <article id="tc_case1en">
-                        <button type="button" class="collapse-header" id="tc_case1-en-head"><h4>[EN] SPC-01 | public playlist with correct link - recognition</h4></button>
+                        <button type="button" class="collapse-header" id="tc_case1-en-head"><h4>[EN] SPC-01 | Public playlist with correct link - recognition</h4></button>
                         <div class="collapse-content" id="tc_case1-en-cont">
+                            <h5>Impotance</h5>
+                            <p>High</p>
                             <h5>Pre-conditions</h5>
                             <ul>
                                 <li>browser installed</li>
@@ -61,27 +63,26 @@
                                 <li>Spotify API is up and running</li>
                             </ul>
                             <h5>Test input</h5>
-                            <p>playlist link: XYZ</p>
+                            <p>playlist link: https://open.spotify.com/playlist/28Ffkndp6PP79X5LgFTXcZ</p>
                             <h5>Test steps</h5>
                             <ol>
                                 <li>Go to the app page.</li>
-                                <li>Enter playlists's link to the pl-link field.</li>
-                                <li>Click "Submit" button.</li>
+                                <li>Enter playlist link to the "Enter public playlist link or ID" field.</li>
+                                <li>Click "Send" button.</li>
                                 <li>Verify the message showing on the screen.</li>
                             </ol>
                             <h5>Expected results</h5>
                             <ol>
-                                <li>Submit button is clickable.</li>
-                                <li>The app is showing the message: PLEASE, FIND BELOW DETAILS OF THE PROVIDED PLAYLIST.</li>
+                                <li>"Send" button is clickable.</li>
+                                <li>The app is showing the message: PLEASE, FIND BELOW DETAILS OF THE REQUESTED PLAYLIST.</li>
                             </ol>
-                            <h5>Actual result</h5>
-                            <p>Submit button is clickable. App is showing the correct message.</p>
-                            <h5>Status: PASSED</h5>
                         </div>
                     </article>
                     <article id="tc_case2en">
                         <button type="button" class="collapse-header" id="tc_case2-en-head"><h4>[EN] SPC-02 | Public playlist with correct ID - recognition</h4></button>
                         <div class="collapse-content" id="tc_case2-en-cont">
+                            <h5>Impotance</h5>
+                            <p>High</p>
                             <h5>Pre-conditions</h5>
                             <ul>
                                 <li>browser installed</li>
@@ -89,27 +90,26 @@
                                 <li>Spotify API is up and running</li>
                             </ul>
                             <h5>Test input</h5>
-                            <p>playlist link: XYZ</p>
+                            <p>playlist ID: 28Ffkndp6PP79X5LgFTXcZ</p>
                             <h5>Test steps</h5>
                             <ol>
                                 <li>Go to the app page.</li>
-                                <li>Enter playlists's link to the pl-link field.</li>
-                                <li>Click "Submit" button.</li>
+                                <li>Enter playlist link to the "Enter public playlist link or ID" field.</li>
+                                <li>Click "Send" button.</li>
                                 <li>Verify the message showing on the screen.</li>
                             </ol>
                             <h5>Expected results</h5>
                             <ol>
-                                <li>Submit button is clickable.</li>
-                                <li>The app is showing the message: PLEASE, FIND BELOW DETAILS OF THE PROVIDED PLAYLIST.</li>
+                                <li>"Send" button is clickable.</li>
+                                <li>The app is showing the message: PLEASE, FIND BELOW DETAILS OF THE REQUESTED PLAYLIST.</li>
                             </ol>
-                            <h5>Actual result</h5>
-                            <p>Submit button is clickable. App is showing the correct message.</p>
-                            <h5>Status: PASSED</h5>
                         </div>
                     </article>
                     <article id="tc_case3en">
                         <button type="button" class="collapse-header" id="tc_case3-en-head"><h4>[EN] SPC-03 | Private playlist with correct link - recognition</h4></button>
                         <div class="collapse-content" id="tc_case3-en-cont">
+                            <h5>Impotance</h5>
+                            <p>High</p>
                             <h5>Pre-conditions</h5>
                             <ul>
                                 <li>browser installed</li>
@@ -117,27 +117,26 @@
                                 <li>Spotify API is up and running</li>
                             </ul>
                             <h5>Test input</h5>
-                            <p>playlist link: XYZ</p>
+                            <p>playlist link: https://open.spotify.com/playlist/7uweYWq9SjMPwV6cPCeJ9Q</p>
                             <h5>Test steps</h5>
                             <ol>
                                 <li>Go to the app page.</li>
-                                <li>Enter playlists's link to the pl-link field.</li>
-                                <li>Click "Submit" button.</li>
+                                <li>Enter playlist link to the "Enter public playlist link or ID" field.</li>
+                                <li>Click "Send" button.</li>
                                 <li>Verify the message showing on the screen.</li>
                             </ol>
                             <h5>Expected results</h5>
                             <ol>
-                                <li>Submit button is clickable.</li>
-                                <li>The app is showing the message: PLEASE, FIND BELOW DETAILS OF THE PROVIDED PLAYLIST.</li>
+                                <li>"Send" button is clickable.</li>
+                                <li>The app is showing the message: SORRY, REQUESTED PLAYLIST EXISTS BUT IT IS PRIVATE.</li>
                             </ol>
-                            <h5>Actual result</h5>
-                            <p>Submit button is clickable. App is showing the correct message.</p>
-                            <h5>Status: PASSED</h5>
                         </div>
                     </article>
                     <article id="tc_case4en">
                         <button type="button" class="collapse-header" id="tc_case4-en-head"><h4>[EN] SPC-04 | Private playlist with correct ID - recognition</h4></button>
                         <div class="collapse-content" id="tc_case4-en-cont">
+                            <h5>Impotance</h5>
+                            <p>High</p>
                             <h5>Pre-conditions</h5>
                             <ul>
                                 <li>browser installed</li>
@@ -145,27 +144,105 @@
                                 <li>Spotify API is up and running</li>
                             </ul>
                             <h5>Test input</h5>
-                            <p>playlist link: XYZ</p>
+                            <p>playlist ID: 7uweYWq9SjMPwV6cPCeJ9Q</p>
                             <h5>Test steps</h5>
                             <ol>
                                 <li>Go to the app page.</li>
-                                <li>Enter playlists's link to the pl-link field.</li>
-                                <li>Click "Submit" button.</li>
+                                <li>Enter playlist ID to the "Enter public playlist link or ID" field.</li>
+                                <li>Click "Send" button.</li>
                                 <li>Verify the message showing on the screen.</li>
                             </ol>
                             <h5>Expected results</h5>
                             <ol>
-                                <li>Submit button is clickable.</li>
+                                <li>"Send" button is clickable.</li>
                                 <li>The app is showing the message: PLEASE, FIND BELOW DETAILS OF THE PROVIDED PLAYLIST.</li>
                             </ol>
-                            <h5>Actual result</h5>
-                            <p>Submit button is clickable. App is showing the correct message.</p>
-                            <h5>Status: PASSED</h5>
                         </div>
                     </article>
                     <article id="tc_case5en">
-                        <button type="button" class="collapse-header" id="tc_case5-en-head"><h4>[EN] Testlink and Testrail downloads and files</h4></button>
+                        <button type="button" class="collapse-header" id="tc_case5-en-head"><h4>[EN] SPC-05 | Playlist with incorrect link - recognition</h4></button>
                         <div class="collapse-content" id="tc_case5-en-cont">
+                            <h5>Impotance</h5>
+                            <p>High</p>
+                            <h5>Pre-conditions</h5>
+                            <ul>
+                                <li>browser installed</li>
+                                <li>example playlist is incorrect</li>
+                                <li>Spotify API is up and running</li>
+                            </ul>
+                            <h5>Test input</h5>
+                            <p>playlist link: https://open.spotify.com/playlist/28Ffkndp6PP</p>
+                            <h5>Test steps</h5>
+                            <ol>
+                                <li>Go to the app page.</li>
+                                <li>Enter playlists link to the "Enter public playlist link or ID" field.</li>
+                                <li>Click "Send" button.</li>
+                                <li>Verify the message showing on the screen.</li>
+                            </ol>
+                            <h5>Expected results</h5>
+                            <ol>
+                                <li>"Send" button is clickable.</li>
+                                <li>The app is showing the message: SORRY, PLAYLIST NOT FOUND. PLEASE CHECK WHETHER YOUR LINK/ID IS CORRECT.</li>
+                            </ol>
+                        </div>
+                    </article>
+                    <article id="tc_case6en">
+                        <button type="button" class="collapse-header" id="tc_case6-en-head"><h4>[EN] SPC-06 | Playlist with incorrect ID - recognition</h4></button>
+                        <div class="collapse-content" id="tc_case6-en-cont">
+                            <h5>Impotance</h5>
+                            <p>High</p>
+                            <h5>Pre-conditions</h5>
+                            <ul>
+                                <li>browser installed</li>
+                                <li>example playlist is incorrect</li>
+                                <li>Spotify API is up and running</li>
+                            </ul>
+                            <h5>Test input</h5>
+                            <p>playlist ID: 28Ffkndp6PP</p>
+                            <h5>Test steps</h5>
+                            <ol>
+                                <li>Go to the app page.</li>
+                                <li>Enter playlists ID to the "Enter public playlist link or ID" field.</li>
+                                <li>Click "Send" button.</li>
+                                <li>Verify the message showing on the screen.</li>
+                            </ol>
+                            <h5>Expected results</h5>
+                            <ol>
+                                <li>"Send" button is clickable.</li>
+                                <li>The app is showing the message: SORRY, PLAYLIST NOT FOUND. PLEASE CHECK WHETHER YOUR LINK/ID IS CORRECT.</li>
+                            </ol>
+                        </div>
+                    </article>
+                    <article id="tc_case8en">
+                        <button type="button" class="collapse-header" id="tc_case8-en-head"><h4>[EN] SPC-08 | Playlist with empty field - recognition</h4></button>
+                        <div class="collapse-content" id="tc_case8-en-cont">
+                            <h5>Impotance</h5>
+                            <p>High</p>
+                            <h5>Pre-conditions</h5>
+                            <ul>
+                                <li>browser installed</li>
+                                <li>Spotify API is up and running</li>
+                            </ul>
+                            <h5>Test input</h5>
+                            <p>none</p>
+                            <h5>Test steps</h5>
+                            <ol>
+                                <li>Go to the app page.</li>
+                                <li>Click "Send" button.</li>
+                                <li>Verify the message showing on the screen.</li>
+                            </ol>
+                            <h5>Expected results</h5>
+                            <ol>
+                                <li>"Send" button is clickable.</li>
+                                <li>The app is showing the message: PLEASE, PROVIDE PLAYLIST LINK OR ID.</li>
+                            </ol>
+                        </div>
+                    </article>
+                    <article id="tc_case9en">
+                        <button type="button" class="collapse-header" id="tc_case9-en-head"><h4>[EN] Testlink and Testrail downloads and files</h4></button>
+                        <div class="collapse-content" id="tc_case9-en-cont">
+                            <h5>Impotance</h5>
+                            <p>High</p>
                             <h5>Pre-conditions</h5>
                             <ul>
                                 <li>browser installed</li>
@@ -177,18 +254,15 @@
                             <h5>Test steps</h5>
                             <ol>
                                 <li>Go to the app page.</li>
-                                <li>Enter playlists's link to the pl-link field.</li>
-                                <li>Click "Submit" button.</li>
+                                <li>Enter playlist ID to the "Enter public playlist link or ID" field.</li>
+                                <li>Click "Send" button.</li>
                                 <li>Verify the message showing on the screen.</li>
                             </ol>
                             <h5>Expected results</h5>
                             <ol>
-                                <li>Submit button is clickable.</li>
-                                <li>The app is showing the message: PLEASE, FIND BELOW DETAILS OF THE PROVIDED PLAYLIST.</li>
+                                <li>"Send" button is clickable.</li>
+                                <li>The app is showing the message: SORRY, REQUESTED PLAYLIST EXISTS BUT IT IS PRIVATE.</li>
                             </ol>
-                            <h5>Actual result</h5>
-                            <p>Submit button is clickable. App is showing the correct message.</p>
-                            <h5>Status: PASSED</h5>
                         </div>
                     </article>
                     <br><br>
