@@ -155,7 +155,7 @@
                             <h5>Expected results</h5>
                             <ol>
                                 <li>"Send" button is clickable.</li>
-                                <li>The app is showing the message: PLEASE, FIND BELOW DETAILS OF THE PROVIDED PLAYLIST.</li>
+                                <li>The app is showing the message: SORRY, REQUESTED PLAYLIST EXISTS BUT IT IS PRIVATE.</li>
                             </ol>
                         </div>
                     </article>
@@ -239,7 +239,7 @@
                         </div>
                     </article>
                     <article id="tc_case9en">
-                        <button type="button" class="collapse-header" id="tc_case9-en-head"><h4>[EN] Testlink and Testrail downloads and files</h4></button>
+                        <button type="button" class="collapse-header" id="tc_case9-en-head"><h4>[EN] Xray downloads and files</h4></button>
                         <div class="collapse-content" id="tc_case9-en-cont">
                             <h5>Importance</h5>
                             <p>High</p>
@@ -268,22 +268,22 @@
                     <br><br>
                     <h3>ZESTAW 1 - ROZPOZNAWANIE STATUSU PLAYLISTY</h3>
                     <article id="tc_case1pl">
-                        <button type="button" class="collapse-header" id="tc_case1-pl-head"><h4>[PL] SPC - | Publiczna playlista z prawidłowym linkiem - rozpoznanie</h4></button>
+                        <button type="button" class="collapse-header" id="tc_case1-pl-head"><h4>[PL] SPCPL-01 | Publiczna playlista z prawidłowym linkiem - rozpoznanie</h4></button>
                         <div class="collapse-content" id="tc_case1-pl-cont">
-                            <h5>Importance</h5>
+                            <h5>Ważność</h5>
                             <p>Wysoka</p>
-                            <h5>Pre-conditions</h5>
+                            <h5>Warunki wstępne</h5>
                             <ul>
                                 <li>zainstalowana przeglądarka</li>
                                 <li>przykładowa playlista jest publiczna</li>
                                 <li>Spotify API działa</li>
                             </ul>
-                            <h5>Test input</h5>
+                            <h5>Dane wejściowe</h5>
                             <p>link do playlisty: https://open.spotify.com/playlist/28Ffkndp6PP79X5LgFTXcZ</p>
-                            <h5>Test steps</h5>
+                            <h5>Kroki</h5>
                             <ol>
-                                <li>Go to the app page.</li>
-                                <li>Wprowadzić link do playlist w pole "Enter public playlist link or ID".</li>
+                                <li>Przejść do stony aplikacji.</li>
+                                <li>Wprowadzić link do playlisty w pole "Enter public playlist link or ID".</li>
                                 <li>Kliknąć przycisk "Send".</li>
                                 <li>Zweryfikować treść wiadomości na ekranie.</li>
                             </ol>
@@ -295,39 +295,163 @@
                         </div>
                     </article>
                     <article id="tc_case2pl">
-                        <button type="button" class="collapse-header" id="tc_case2-pl-head"><h4>[PL] SPC - | Publiczna playlista z prawidłowym ID - rozpoznanie</h4></button>
+                        <button type="button" class="collapse-header" id="tc_case2-pl-head"><h4>[PL] SPCPL-02 | Publiczna playlista z prawidłowym ID - rozpoznanie</h4></button>
                         <div class="collapse-content" id="tc_case2-pl-cont">
-                                                        
+                            <h5>Ważność</h5>
+                            <p>Wysoka</p>
+                            <h5>Warunki wstępne</h5>
+                            <ul>
+                                <li>zainstalowana przeglądarka</li>
+                                <li>przykładowa playlista jest publiczna</li>
+                                <li>Spotify API działa</li>
+                            </ul>
+                            <h5>Dane wejściowe</h5>
+                            <p>ID playlisty: 28Ffkndp6PP79X5LgFTXcZ</p>
+                            <h5>Kroki do wykonania</h5>
+                            <ol>
+                                <li>Przejść do stony aplikacji.</li>
+                                <li>Wprowadzić ID playlisty w pole "Enter public playlist link or ID".</li>
+                                <li>Kliknąć przycisk "Send".</li>
+                                <li>Zweryfikować treść wiadomości na ekranie.</li>
+                            </ol>
+                            <h5>Oczekiwany wynik</h5>
+                            <ol>
+                                <li>Przycisk "Send" jest klikalny.</li>
+                                <li>Pojawia się komunikat: PLEASE, FIND BELOW DETAILS OF THE REQUESTED PLAYLIST.</li>
+                            </ol>                               
                         </div>
                     </article>
                     <article id="tc_case3pl">
-                        <button type="button" class="collapse-header" id="tc_case3-pl-head"><h4>[PL] SPC - | Prywatna z prawidłowym linkeim - rozpoznanie</h4></button>
+                        <button type="button" class="collapse-header" id="tc_case3-pl-head"><h4>[PL] SPCPL-03 | Prywatna z prawidłowym linkeim - rozpoznanie</h4></button>
                         <div class="collapse-content" id="tc_case3-pl-cont">
-                                                        
+                            <h5>Ważność</h5>
+                            <p>Wysoka</p>
+                            <h5>Warunki wstępne</h5>
+                            <ul>
+                                <li>zainstalowana przeglądarka</li>
+                                <li>przykładowa playlista jest prywatna</li>
+                                <li>Spotify API działa</li>
+                            </ul>
+                            <h5>Dane wejściowe</h5>
+                            <p>Link do playlisty: https://open.spotify.com/playlist/7uweYWq9SjMPwV6cPCeJ9Q</p>
+                            <h5>Kroki do wykonania</h5>
+                            <ol>
+                                <li>Przejść do stony aplikacji.</li>
+                                <li>Wprowadzić link do playlisty w pole "Enter public playlist link or ID".</li>
+                                <li>Kliknąć przycisk "Send".</li>
+                                <li>Zweryfikować treść wiadomości na ekranie.</li>
+                            </ol>
+                            <h5>Oczekiwany wynik</h5>
+                            <ol>
+                                <li>Przycisk "Send" jest klikalny.</li>
+                                <li>Pojawia się komunikat: SORRY, REQUESTED PLAYLIST EXISTS BUT IT IS PRIVATE.</li>
+                            </ol>                   
                         </div>
                     </article>
                     <article id="tc_case4pl">
-                        <button type="button" class="collapse-header" id="tc_case4-pl-head"><h4>[PL] SPC - | Prywatna playlista z prawidłowym ID - rozpoznanie</h4></button>
+                        <button type="button" class="collapse-header" id="tc_case4-pl-head"><h4>[PL] SPCPL-04 | Prywatna playlista z prawidłowym ID - rozpoznanie</h4></button>
                         <div class="collapse-content" id="tc_case4-pl-cont">
-                                                        
+                            <h5>Ważność</h5>
+                            <p>Wysoka</p>
+                            <h5>Warunki wstępne</h5>
+                            <ul>
+                                <li>zainstalowana przeglądarka</li>
+                                <li>przykładowa playlista jest prywatna</li>
+                                <li>Spotify API działa</li>
+                            </ul>
+                            <h5>Dane wejściowe</h5>
+                            <p>ID playlisty: 7uweYWq9SjMPwV6cPCeJ9Q</p>
+                            <h5>Kroki do wykonania</h5>
+                            <ol>
+                                <li>Przejść do stony aplikacji.</li>
+                                <li>Wprowadzić ID playlisty w pole "Enter public playlist link or ID".</li>
+                                <li>Kliknąć przycisk "Send".</li>
+                                <li>Zweryfikować treść wiadomości na ekranie.</li>
+                            </ol>
+                            <h5>Oczekiwany wynik</h5>
+                            <ol>
+                                <li>Przycisk "Send" jest klikalny.</li>
+                                <li>Pojawia się komunikat: SORRY, REQUESTED PLAYLIST EXISTS BUT IT IS PRIVATE.</li>
+                            </ol>                          
                         </div>
                     </article>
                     <article id="tc_case5pl">
-                        <button type="button" class="collapse-header" id="tc_case5-pl-head"><h4>[PL] SPC - | Playlista z nieprawidłowym linkiem - rozpoznanie</h4></button>
+                        <button type="button" class="collapse-header" id="tc_case5-pl-head"><h4>[PL] SPCPL-05 | Playlista z nieprawidłowym linkiem - rozpoznanie</h4></button>
                         <div class="collapse-content" id="tc_case5-pl-cont">
-                                                        
+                            <h5>Ważność</h5>
+                            <p>Wysoka</p>
+                            <h5>Warunki wstępne</h5>
+                            <ul>
+                                <li>zainstalowana przeglądarka</li>
+                                <li>link do przykładowej playlisty jest nieprawidłowy</li>
+                                <li>Spotify API działa</li>
+                            </ul>
+                            <h5>Dane wejściowe</h5>
+                            <p>Link do playlisty: https://open.spotify.com/playlist/28Ffkndp6PP</p>
+                            <h5>Kroki do wykonania</h5>
+                            <ol>
+                                <li>Przejść do stony aplikacji.</li>
+                                <li>Wprowadzić link do playlisty w pole "Enter public playlist link or ID".</li>
+                                <li>Kliknąć przycisk "Send".</li>
+                                <li>Zweryfikować treść wiadomości na ekranie.</li>
+                            </ol>
+                            <h5>Oczekiwany wynik</h5>
+                            <ol>
+                                <li>Przycisk "Send" jest klikalny.</li>
+                                <li>Pojawia się komunikat: SORRY, PLAYLIST NOT FOUND. PLEASE CHECK WHETHER YOUR LINK/ID IS CORRECT.</li>
+                            </ol>                     
                         </div>
                     </article>
                     <article id="tc_case6pl">
-                        <button type="button" class="collapse-header" id="tc_case6-pl-head"><h4>[PL] SPC - | Playlista z nieprawidłowym ID - rozpoznanie</h4></button>
+                        <button type="button" class="collapse-header" id="tc_case6-pl-head"><h4>[PL] SPCPL-06 | Playlista z nieprawidłowym ID - rozpoznanie</h4></button>
                         <div class="collapse-content" id="tc_case6-pl-cont">
-                                                        
+                            <h5>Ważność</h5>
+                            <p>Wysoka</p>
+                            <h5>Warunki wstępne</h5>
+                            <ul>
+                                <li>zainstalowana przeglądarka</li>
+                                <li>ID przykładowej playlisty jest nieprawidłowe</li>
+                                <li>Spotify API działa</li>
+                            </ul>
+                            <h5>Dane wejściowe</h5>
+                            <p>ID playlisty: p6PP</p>
+                            <h5>Kroki do wykonania</h5>
+                            <ol>
+                                <li>Przejść do stony aplikacji.</li>
+                                <li>Wprowadzić ID playlisty w pole "Enter public playlist link or ID".</li>
+                                <li>Kliknąć przycisk "Send".</li>
+                                <li>Zweryfikować treść wiadomości na ekranie.</li>
+                            </ol>
+                            <h5>Oczekiwany wynik</h5>
+                            <ol>
+                                <li>Przycisk "Send" jest klikalny.</li>
+                                <li>Pojawia się komunikat: SORRY, PLAYLIST NOT FOUND. PLEASE CHECK WHETHER YOUR LINK/ID IS CORRECT.</li>
+                            </ol>                       
                         </div>
                     </article>
                     <article id="tc_case7pl">
-                        <button type="button" class="collapse-header" id="tc_case7-pl-head"><h4>[PL] SPC - | Playlista z pustym polem - rozpoznanie</h4></button>
+                        <button type="button" class="collapse-header" id="tc_case7-pl-head"><h4>[PL] SPCPL-07 | Playlista z pustym polem - rozpoznanie</h4></button>
                         <div class="collapse-content" id="tc_case7-pl-cont">
-                                                        
+                            <h5>Ważność</h5>
+                            <p>Wysoka</p>
+                            <h5>Warunki wstępne</h5>
+                            <ul>
+                                <li>zainstalowana przeglądarka</li>
+                                <li>Spotify API działa</li>
+                            </ul>
+                            <h5>Dane wejściowe</h5>
+                            <p>brak</p>
+                            <h5>Kroki do wykonania</h5>
+                            <ol>
+                                <li>Przejść do stony aplikacji.</li>
+                                <li>Kliknąć przycisk "Send".</li>
+                                <li>Zweryfikować treść wiadomości na ekranie.</li>
+                            </ol>
+                            <h5>Oczekiwany wynik</h5>
+                            <ol>
+                                <li>Przycisk "Send" jest klikalny.</li>
+                                <li>Pojawia się komunikat: PLEASE, PROVIDE PLAYLIST LINK OR ID.</li>
+                            </ol>                           
                         </div>
                     </article>
                 </section>
